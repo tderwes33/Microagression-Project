@@ -1,0 +1,17 @@
+{
+	"cast": {
+		"MC1": {
+			"name": "MC1"
+		},
+		"Chase": {
+			"name": "Chase"
+		},
+		"Devin": {
+			"name" : "Devin"
+		},
+		"Julia" : {
+			"name" : "Julia"
+		}
+		
+	}
+}

@@ -1,0 +1,241 @@
+{
+	"schema": [
+		{
+			"actionable": false,
+			"directionType": "undirected",
+			"isBoolean": true,
+			"cloneEachTimeStep": true,
+			"category": "largerEmotionalGroups",
+			"types": [
+				"positive",
+				"negative"
+			],
+			"defaultValue": false
+		},
+		{
+			"actionable": false,
+			"directionType": "undirected",
+			"isBoolean": true,
+			"cloneEachTimeStep": true,
+			"category": "facialExpressions",
+			"types": [
+				"happy-expression",
+				"neutral-expression",
+				"stoic-expression"
+			],
+			"defaultValue": false
+		},
+		{
+			"actionable": false,
+			"directionType": "directed",
+			"isBoolean": true,
+			"cloneEachTimeStep": true,
+			"category": "tone",
+			"types": [
+				"blunt",
+				"caring",
+				"nonchalant",
+				"ignorant",
+				"calm"
+			],
+			"defaultValue": false
+		},
+		{
+			"actionable": false,
+			"directionType": "undirected",
+			"isBoolean": true,
+			"cloneEachTimeStep": true,
+			"category": "ethnicity",
+			"types": [
+				"black",
+				"asian",
+				"latino",
+				"caucasian",
+				"ambiguous",
+				"mixed-race"
+			],
+			"defaultValue": false
+		},
+		{
+			"actionable": false,
+			"directionType": "undirected",
+			"isBoolean": true,
+			"cloneEachTimeStep": true,
+			"category": "personality",
+			"types": [
+				"nerdy-dudebro",
+				"battlehardened",
+				"introvert",
+				"mainchar"
+			],
+			"defaultValue": false
+		},
+		{
+			"actionable": false,
+			"directionType": "undirected",
+			"isBoolean": true,
+			"cloneEachTimeStep": true,
+			"category": "studyPartnerQuality",
+			"types": [
+				"bad-study",
+				"good-study",
+				"average-study",
+				"busy-study"
+			],
+			"defaultValue": false
+		},
+		{
+			"actionable": false,
+			"directionType": "undirected",
+			"isBoolean": true,
+			"cloneEachTimeStep": true,
+			"category": "trait",
+			"types": [
+				"anyone",
+				"named mc1",
+				"named chase",
+				"named devin",
+				"named julia"
+			],
+			"defaultValue": false
+		},
+		{
+			"actionable": false,
+			"directionType": "undirected",
+			"isBoolean": true,
+			"cloneEachTimeStep": true,
+			"category": "Gender",
+			"types": [
+				"male",
+				"female"
+			],
+			"defaultValue": false
+		},
+		{
+			"actionable": false,
+			"directionType": "undirected",
+			"isBoolean": true,
+			"cloneEachTimeStep": true,
+			"duration": 5,
+			"category": "socialRecordLabelUndirected",
+			"types": [
+				"self-involved",
+				"selfless",
+				"self-improvement-failure",
+				"personally-attacked",
+				"aggressor",
+				"too-smart",
+				"exposed",
+				"not-exposed"
+			],
+			"defaultValue": false
+		},
+		{
+			"actionable": true,
+			"directionType": "undirected",
+			"isBoolean": false,
+			"cloneEachTimeStep": true,
+			"category": "attribute",
+			"types": [
+				"intelligence",
+				"persuasiveness",
+				"self-perception"
+			],
+			"defaultValue": 0,
+			"maxValue": 100,
+			"minValue": 0
+		},
+		{
+			"actionable": false,
+			"directionType": "undirected",
+			"isBoolean": true,
+			"cloneEachTimeStep": true,
+			"category": "mood",
+			"types": [
+				"angry",
+				"caring",
+				"neutral",
+				"happy",
+				"pretentious",
+				"uptight",
+				"relaxed",
+				"goofy",
+				"confused",
+				"excited",
+				"discouraged",
+				"lonely",
+				"uncomfortable",
+				"confident",
+				"tired"
+			],
+			"defaultValue": false
+		},
+		{
+			"actionable": false,
+			"directionType": "undirected",
+			"isBoolean": true,
+			"cloneEachTimeStep": true,
+			"category": "location",
+			"types": [
+				"in-class",
+				"already-seated",
+				"looking-for-seat",
+				"next-to-friend"
+			],
+			"defaultValue": false
+		},
+		{
+			"actionable": true,
+			"directionType": "directed",
+			"isBoolean": true,
+			"cloneEachTimeStep": true,
+			"duration": 2,
+			"category": "communication",
+			"types": [
+				"talking",
+				"couldnt-expose",
+				"could-expose",
+				"talking-in-class"
+			],
+			"defaultValue": false
+		},
+		{
+			"actionable": true,
+			"directionType": "directed",
+			"isBoolean": false,
+			"cloneEachTimeStep": true,
+			"category": "feeling",
+			"types": [
+				"friendship",
+				"tension",
+				"calmness",
+				"awkwardness",
+				"stress",
+				"empathy",
+				"self-awareness"
+			],
+			"defaultValue": 0,
+			"maxValue": 100,
+			"minValue": 0
+		},
+		{
+			"actionable": false,
+			"directionType": "directed",
+			"isBoolean": true,
+			"cloneEachTimeStep": true,
+			"duration": 5,
+			"category": "socialRecordLabel",
+			"types": [
+				"befriend-success",
+				"befriend-failure",
+				"microaggression-avoided",
+				"wants-to-sit-next-to",
+				"microaggression-happened",
+				"aggressioned-recognized",
+				"sitting-with",
+				"recentnicething"
+			],
+			"defaultValue": false
+		}
+	]
+}

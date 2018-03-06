@@ -1,0 +1,154 @@
+{
+	"history": [
+		{
+			"pos": 0,
+			"data": [
+				{
+					"category": "trait",
+					"type": "named mc1",
+					"first": "MC1",
+					"value": true
+				},
+				{
+					"category": "trait",
+					"type": "named chase",
+					"first": "Chase",
+					"value": true
+				},
+				{
+					"category" : "trait",
+					"type" : "named devin",
+					"first" : "Devin",
+					"value" : true
+				},
+				{
+					"category" : "trait",
+					"type" : "named julia",
+					"first" : "Julia",
+					"value" : true
+				},
+				{
+					"category": "trait",
+					"type": "anyone",
+					"first": "MC1",
+					"value": true
+				},
+				{
+					"category": "trait",
+					"type": "anyone",
+					"first": "Chase",
+					"value": true
+				},
+				{
+					"category" : "trait",
+					"type" : "anyone",
+					"first" : "Devin",
+					"value" : true
+				},
+				{
+					"category" : "trait",
+					"type" : "anyone",
+					"first" : "Julia",
+					"value" : true
+				},
+				{
+					"category": "attribute",
+					"type": "persuasiveness",
+					"first": "MC1",
+					"value": 5
+				},
+				{
+					"category" : "personality",
+					"type" : "mainchar",
+					"first" : "MC1",
+					"value" : true
+				},
+				{
+					"category" : "personality",
+					"type" : "nerdy-dudebro",
+					"first" : "Chase",
+					"value" : true
+				},
+				{
+					"category" : "personality",
+					"type" : "introvert",
+					"first" : "Devin",
+					"value" : true
+				},
+				{
+					"category" : "personality",
+					"type" : "battlehardened",
+					"first" : "Julia",
+					"value" : true
+				},
+				{
+					"category" : "studyPartnerQuality",
+					"type" : "good-study",
+					"first" : "Chase",
+					"value" : true
+				},
+				{
+					"category" : "studyPartnerQuality",
+					"type" : "average-study",
+					"first" : "Devin",
+					"value" : true
+				},
+				{
+					"category" : "studyPartnerQuality",
+					"type" : "busy-study",
+					"first" : "Julia",
+					"value" : true
+				},
+				{
+					"category" : "ethnicity",
+					"type" : "asian",
+					"first" : "Chase",
+					"value" : true
+				},
+				{
+					"category" : "ethnicity",
+					"type" : "latino",
+					"first" : "Chase",
+					"value" : true
+				},
+				{
+					"category" : "ethnicity",
+					"type" : "mixed-race",
+					"first" : "Chase",
+					"value" : true
+				},
+				{
+					"category" : "ethnicity",
+					"type" : "black",
+					"first" : "Devin",
+					"value" : true
+				},
+				{
+					"category" : "ethnicity",
+					"type" : "caucasian",
+					"first" : "Julia",
+					"value" : true
+				},
+				{
+					"category" : "gender",
+					"type" : "male",
+					"first" : "Chase",
+					"value" : true
+				},
+				{
+					"category" : "gender",
+					"type" : "male",
+					"first" : "Devin",
+					"value" : true
+				},
+				{
+					"category" : "gender",
+					"type" : "female",
+					"first" : "Julia",
+					"value" : true
+				}
+
+			]
+		}
+	]
+}

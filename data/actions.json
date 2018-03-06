@@ -1,0 +1,1038 @@
+{
+	"fileName" : "actions.json",
+	"actions" : [
+		
+		{
+			"name" : "RAISEINTELLIGENCE",
+			"intent" : {
+				"category" : "attribute",
+				"type" : "intelligence",
+				"intentType" : true,
+				"first" : "initiator"
+			},
+			"conditions" : [],
+			"influenceRules" : [],
+			"leadsTo" : ["STUDY", "GOTOCLASS"]
+		},
+
+		{
+			"name" : "STUDY",
+			"conditions" : [],
+			"influenceRules" : [],
+			"leadsTo" : ["studyMath","studyWriting","superStudy"]
+		},
+
+		{
+			"name" : "studyMath",
+			"conditions" : [],
+			"displayName" : "Study Math",
+			"influenceRules" : [{
+				"name" : "self-involved people want to study other material",
+				"conditions" : [{
+					"category" : "socialRecordLabelUndirected",
+					"type" : "self-involved",
+					"first" : "initiator",
+					"value" : true
+					}],
+					"weight" : -5
+				}],
+			"effects" : [{
+				"category" : "attribute",
+				"type" : "intelligence",
+				"first" : "initiator",
+				"operator" : "+",
+				"value" : 15		
+			},{
+					"category" : "socialRecordLabelUndirected",
+					"type" : "self-involved",
+					"first" : "initiator",
+					"value" : true
+				}]
+		},
+
+
+		{
+			"name" : "studyWriting",
+			"conditions" : [],
+			"displayName" : "Study Writing",
+			"influenceRules" : [{
+				"name" : "self-involved people want to study writing",
+				"conditions" : [{
+					"category" : "socialRecordLabelUndirected",
+					"type" : "self-involved",
+					"first" : "initiator",
+					"value" : false
+				}],
+				"weight" : -5
+				}],
+				"effects" : [{
+					"category" : "attribute",
+					"type" : "intelligence",
+					"first" : "initiator",
+					"value" : 10,
+					"operator" : "+"
+				},{
+					"category" : "attribute",
+					"type" : "persuasiveness",
+					"first" : "initiator",
+					"value" : 5,
+					"operator" : "+"
+				}]
+		},
+
+		{
+			"name" : "superStudy",
+			"conditions" : [{
+				"category" : "socialRecordLabelUndirected",
+				"type" : "self-involved",
+				"first" : "initiator",
+				"value" : true
+			},{
+				"category" : "attribute",
+				"type" : "intelligence",
+				"first" : "initiator",
+				"value" : 19,
+				"operator" : ">"
+			}],
+			"displayName" : "Super Study",
+			"influenceRules" : [],
+			"effects" : [{
+				"category" : "attribute",
+				"type" : "intelligence",
+				"first" : "initiator",
+				"operator" : "+",
+				"value" : 15 
+			},{
+				"category" : "attribute",
+				"type" : "persuasiveness",
+				"first" : "initiator",
+				"operator" : "+",
+				"value" : 10
+			},{
+				"category" : "socialRecordLabelUndirected",
+				"type" : "self-involved",
+				"first" : "initiator",
+				"value" : false
+			},{
+				"category" : "socialRecordLabelUndirected",
+				"type" : "too-smart",
+				"first" : "initiator",
+				"value" : true
+			}]
+		},
+
+{
+		"name" : "GOTOCLASS",
+		"conditions" : [],
+		"influenceRules" : [{
+			"name" : "People that are good studiers want to go to class",
+			"conditions" : [{
+				"category" : "studyPartnerQuality",
+				"type" : "good-study",
+				"first" : "initiator",
+				"value" : true 
+				}],
+			"weight" : 3
+			}],
+		"leadsTo" : ["findSeat", "listenToLecture", "sleepInLecture"]
+	},
+
+	{
+		"name" : "findSeat",
+		"conditions" : [{
+			"category" : "location",
+			"type" : "in-class",
+			"first" : "initiator",
+			"value" : false
+			}],
+		"displayName" : "looking for a seat",
+		"influenceRules" : [],
+		"effects" : [{
+			"category" : "location",
+			"type" : "in-class",
+			"first" : "initiator",
+			"value" : true
+		},{
+			"category" : "location",
+			"type" : "already-seated",
+			"first" : "initiator",
+			"value" : true
+		},{
+			"category" : "attribute",
+			"type" : "intelligence",
+			"first" : "initiator",
+			"operator" : "+",
+			"value" : 3 
+		}]	
+	},
+
+	{
+		"name" : "listenToLecture", 
+		"conditions" : [{
+			"category" : "location",
+			"type" : "in-class",
+			"first" : "initiator",
+			"value" : true
+		},{
+			"category" : "location",
+			"type" : "already-seated",
+			"first" : "initiator",
+			"value" : true
+			}],
+		"displayName" : "You listen attentively and learn the material",
+		"influenceRules" : [],
+		"effects" : [{
+			"category" : "mood",
+			"type" : "confident",
+			"first" : "initiator",
+			"value" : true
+		},{
+			"category" : "attribute",
+			"type" : "intelligence",
+			"first" : "initiator",
+			"operator" : "+",
+			"value" : 10
+			}]
+	},
+
+	{
+		"name" : "sleepInLecture",
+		"conditions" : [{
+			"category" : "location",
+			"type" : "in-class",
+			"first" : "initiator",
+			"value" : true
+		},{
+			"category" : "location",
+			"type" : "already-seated",
+			"first" : "initiator",
+			"value" : true
+		},{
+			"category" : "mood",
+			"type" : "tired",
+			"first" : "initiator",
+			"value" : true
+		},{
+			"category" : "largerEmotionalGroups",
+			"type" : "negative",
+			"first" : "initiator",
+			"value" : true
+			}],
+		"displayName" : "You were unable to focus and fell asleep, now you're lost on the class material",
+		"influenceRules" : [],
+		"effects" : [{
+			"category" : "attribute",
+			"type" : "intelligence",
+			"first" : "initiator",
+			"operator" : "-",
+			"value" : 5
+		},{
+			"category" : "mood",
+			"type" : "confused",
+			"first" : "initiator",
+			"value" : true
+		},{
+			"category" : "mood",
+			"type" : "tired",
+			"first" : "initiator",
+			"value" : false
+			}]	
+	},
+
+
+	{
+		  "name" : "RAISEPERSUASIVENESS",
+		  "intent" : {
+		  	  "category" : "attribute",
+		  	  "type" : "persuasiveness",
+		  	  "intentType" : true, 
+		  	  "first" : "initiator"
+		  },
+          "conditions" : [],
+          "influenceRules": [],
+          "leadsTo" : ["READ","PresentInClass"]
+		},
+
+		{ 
+			"name" : "READ",
+			"conditions" : [],
+			"influenceRules" : [],
+			"leadsTo" : ["readPersuasiveArticles"]
+
+		},
+
+		{
+			"name" : "readPersuasiveArticles",
+			"conditions" : [],
+			"displayName" : "readPersuasiveArticles",
+			"influenceRules" : [],
+			"effects" : [{
+				"category" : "attribute",
+				"type" : "persuasiveness",
+				"first" : "initiator",
+				"operator" : "+",
+				"value" : 10
+				}]
+		},
+
+		{
+			"name" : "PresentInClass",
+			"conditions" : [{
+				"category" : "location",
+				"type" : "in-class",
+				"first" : "initiator",
+				"value" : true
+			},{
+			   "category" : "location",
+			   "type" : "already-seated",
+			   "first" : "initiator",
+			   "value" : true
+			}],
+			"influenceRules" : [
+			{
+				"name" : "Confident people tend to desire presenting more",
+				"conditions" : [{
+					"category" : "mood",
+					"type" : "confident",
+					"first" : "initiator",
+					"value" : true
+				}],
+				"weight" : 5
+			},{
+				"name" : "Negative people tend to dislike presenting",
+				"conditions" : [{
+				"category" : "largerEmotionalGroups",
+				"type" : "negative",
+				"first" : "initiator",
+				"value" : true
+					}],
+				"weight" : -5
+				}],
+			
+			"leadsTo" : ["presentSuccess","presentFailure"]
+		},
+
+
+
+	{
+			"name" : "presentSuccess",
+			"displayName" : "Your presentation went flawlessly",
+			"conditions" : [{
+				"category" : "attribute",
+				"type" : "persuasiveness",
+				"first" : "initiator",
+				"value" : 20, 
+				"operator" : ">"
+				}],
+
+		    "influenceRules" : [],		    	
+		    "effects" : [{
+		    	"category" : "attribute",
+		    	"type" : "intelligence",
+		    	"first" : "initiator",
+		    	"value" : 5,
+		    	"operator" : "+" 	
+		    },{
+		    	"category" : "attribute",
+		    	"type" : "persuasiveness",
+		    	"first" : "initiator",
+		    	"value" : 10,
+		    	"operator" : "+"
+		    },{
+		    	"category" : "largerEmotionalGroups",
+		    	"type" : "positive",
+		    	"first" : "initiator",
+		    	"value" : true
+		    }]
+		},
+
+	{
+			"name" : "presentFailure",
+			"diplayName" : "You messed up and stumbled over your words while you presented... ",
+			"conditions" : [{
+				"category" : "attribute",
+				"type" : "persuasiveness",
+				"first" : "initiator",
+				"value" : 21,
+				"operator" : "<"
+				}],
+			"influenceRules" : [],
+			"effects" : [{
+				"category" : "attribute",
+				"type" : "intelligence",
+				"first" : "initiator",
+				"value" : 1,
+				"operator" : "+"
+			},{
+				"category" : "attribute",
+				"type" : "persuasiveness",
+				"first" : "initiator",
+				"operator" : "-",
+				"value" : 5			
+			},{
+				"category" : "largerEmotionalGroups",
+				"type" : "negative",
+				"first" : "initiator",
+				"value" : true
+			}]
+				
+		},
+
+	{
+    	"name" : "RAISEFRIENDSHIP",
+    	"intent" : {
+    		"category" : "feeling",
+    		"type" : "friendship",
+    		"intentType" : true,
+    		"first" : "initiator",
+    		"second" : "responder"
+    	},
+    	"conditions" : [],
+    	"influenceRules" : [],
+    	"leadsTo" : ["WALKTO", "COMPLIMENT", "MAKESMALLTALK", "BEFAKE", "FINDFRIEND"]
+	},
+
+	{
+			"name" : "WALKTO",
+			"conditions" : [{
+				"category" : "communication",
+				"type" : "talking",
+				"first" : "initiator",
+				"second" : "responder",
+				"value" : false
+				}],
+			"influenceRules" : [],
+			"leadsTo" : ["interactWith"]
+		},
+
+		{
+			"name" : "interactWith",
+			"displayName" : "Talking", 
+			"conditions" : [],
+			"influenceRules" : [{
+				"name" : "Positive people are more likely to interact with others",
+				"conditions" : [{
+					"category" : "largerEmotionalGroups",
+					"type" : "positive",
+					"first" : "initiator",
+					"value" : true
+					}],
+				"weight" : 5
+				}],
+			"effects" : [{
+				"category" : "communication",
+				"type" : "talking",
+				"first" : "initiator",
+				"second" : "responder",
+				"value" : true
+			},{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "responder",
+				"second" : "initiator",
+				"value" : 3,
+				"operator" : "+"
+
+			}]	
+		},
+
+	{
+			"name" : "COMPLIMENT",
+			"conditions" : [{
+				"category" : "communication",
+				"type" : "talking",
+				"first" : "initiator",
+				"second" : "responder",
+				"value" : true
+				}],
+			"influenceRules" : [],
+			"leadsTo" : ["SAYNICETHING"]	
+		},
+
+		{
+			"name" : "SAYNICETHING",
+			"conditions" :[{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "initiator",
+				"second" : "responder",
+				"operator" : "<",
+				"value" : 50
+			}],
+			"influenceRules" : [],
+			"leadsTo" : ["niceThingSuccess", "niceThingFail"]
+		},
+
+		{
+			"name" : "niceThingSuccess",
+			"displayName" : "niceThing <SUCCESS>",
+			"conditions" : [],
+			"influenceRules" : [{
+				"name" : "Positive people are more likely to compliment others",
+				"conditions" : [{
+					"category" : "largerEmotionalGroups",
+					"type" : "positive",
+					"first" : "initiator",
+					"value" : true 
+					}],
+					"weight" : 5	
+				},{
+					"name" : "If people have recently said niceThings successfully, then they are less likely to say it again",
+					"conditions" : [{
+						"category" : "socialRecordLabel",
+						"type" : "recentnicething",
+						"first" : "initiator",
+						"second" : "responder",
+						"value" : true
+						}],
+					"weight" : -4	
+					}],
+				"effects" : [{
+					"category" : "feeling",
+					"type" : "friendship",
+					"first" : "initiator",
+					"second" : "responder",
+					"operator" : "+",
+					"value" : 5
+				},{
+					"category" : "attribute",
+					"type" : "self-perception",
+					"first" : "initiator",
+					"operator" : "+",
+					"value" : 5
+				},{
+					"category" : "attribute",
+					"type" : "persuasiveness",
+					"first" : "initiator",
+					"operator" : "+",
+					"value" : 5
+				},{
+					"category" : "largerEmotionalGroups",
+					"type" : "positve",
+					"first" : "responder",
+					"value" : true 
+				},{
+					"category" : "socialRecordLabel",
+					"type" : "recentnicething",
+					"first" : "initiator",
+					"second" : "responder",
+					"value" : true
+					}]
+		},
+
+		{
+			"name" : "niceThingFail",
+			"displayName" : "niceThing <FAIL>",
+			"conditions" : [{
+				"category" : "largerEmotionalGroups",
+				"type" : "negative",
+				"first" : "responder",
+				"value" : true
+				}],
+			"influenceRules" : [],
+			"effects" : [{
+				"category" : "largerEmotionalGroups",
+				"type" : "negative",
+				"first" : "initiator",
+				"value" : true
+				}]
+		},
+
+		{
+			"name" : "MAKESMALLTALK",
+			"conditions" : [],
+			"influenceRules" : [],
+			"leadsTo" : ["aggressionMissed"]
+		},
+
+		{
+			"name" : "aggressionMissed",
+			"displayName" : "No microaggressions today!",
+			"conditions" : [{
+				"category" : "socialRecordLabelUndirected",
+				"type" : "aggressor",
+				"first" : "initiator",
+				"value" : true
+			},{
+				"category" : "socialRecordLabelUndirected",
+				"type" : "personally-attacked",
+				"first" : "responder",
+				"value" : true
+			}],
+			"influenceRules" : [],
+			"effects" : [{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "initiator",
+				"second" : "responder",
+				"value" : 5,
+				"operator" : "+"
+			},{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "responder",
+				"second" : "initiator",
+				"value" : 5,
+				"operator" : "+"
+				}]
+		},
+
+
+{
+			"name" : "BEFAKE",
+			"conditions" : [{
+				"category" : "communication",
+				"type" : "talking",
+				"first" : "initiator",
+				"second" : "responder",
+				"value" : true
+			},{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "initiator",
+				"second" : "responder",
+				"operator" : "<",
+				"value" : 20
+ 				}],
+ 			"influenceRules" : [],
+ 			"leadsTo" : ["pretendYouKnowSuccess", "pretendYouKnowFail"]
+		},
+
+		{
+			"name" : "pretendYouKnowSuccess",
+			"displayName" : "Good Faker",
+			"conditions" : [{
+				"category" : "attribute",
+				"type" : "persuasiveness",
+				"first" : "initiator",
+				"operator" : ">",
+				"value" : 30
+				}],
+			"influenceRules" : [],
+			"effects" : [{
+				"category" : "socialRecordLabelUndirected",
+				"type" : "not-exposed",
+				"first" : "initiator",
+				"value" : true
+			},{
+				"category" : "communication",
+				"type" : "couldnt-expose",
+				"first" : "responder",
+				"second" : "initiator",
+				"value" : true
+			},{
+				"category" : "largerEmotionalGroups",
+				"type" : "positive",
+				"first" : "responder",
+				"value" : true
+			},{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "initiator",
+				"second" : "responder",
+				"operator" : "+",
+				"value" : 5
+			},{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "responder",
+				"second" : "initiator",
+				"operator" : "+",
+				"value" : 10
+				}]
+		},
+
+		{
+			"name" : "pretendYouKnowFail",
+			"displayName" : "Bad Faker",
+			"conditions" : [{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "responder",
+				"second" : "initiator",
+				"operator" : ">",
+				"value" : 40
+				}],
+			"influenceRules" : [],
+			"effects" : [{
+				"category" : "socialRecordLabelUndirected",
+				"type" : "exposed",
+				"first" : "initiator",
+				"value" : true
+			},{
+				"category" : "communication",
+				"type" : "could-expose",
+				"first" : "responder",
+				"second" : "initiator",
+				"value" : true
+			},{
+				"category" : "mood",
+				"type" : "uncomfortable",
+				"first" : "initiator",
+				"value" : true
+			},{
+				"category" : "mood",
+				"type" : "confused",
+				"first" : "responder",
+				"value" : true
+			},{
+				"category" : "feeling",
+				"type" : "awkwardness",
+				"first" : "initiator",
+				"second" : "responder",
+				"operator" : "+",
+				"value" : 5
+			},{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "responder",
+				"second" : "initiator",
+				"operator" : "+",
+				"value" : 10
+			}]
+				
+		},
+
+{
+			"name" : "FINDFRIEND",
+			"conditions" : [{
+				"category" : "location",
+				"type" : "in-class",
+				"first" : "initiator",
+				"second" : "responder",
+				"value" : true
+				}],
+			"influenceRules" : [],
+			"leadsTo" : ["sitNextTo", "friendMoves"]
+		},
+
+		{
+			"name" : "sitNextTo",
+			"displayName" : "You see your friend and decide to sit next to them",
+			"conditions" : [{
+				"category" : "location",
+				"type" : "already-seated",
+				"first" : "responder",
+				"value" : true
+			},{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "responder",
+				"second" : "initiator",
+				"operator" : ">",
+				"value" : 10
+			},{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "initiator",
+				"second" : "responder",
+				"operator" : ">",
+				"value" : 10
+ 				}],	
+			"influenceRules" : [],
+			"effects" : [{
+				"category" : "socialRecordLabel",
+				"type" : "sitting-with",
+				"first" : "initiator",
+				"second" : "responder",
+				"value" : true
+			},{
+				"category" : "socialRecordLabel",
+				"type" : "sitting-with",
+				"first" : "responder",
+				"second" : "initiator",
+				"value" : true
+			},{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "initiator",
+				"second" : "responder",
+				"operator" : "+",
+				"value" : 8
+			},{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "responder",
+				"second" : "initiator",
+				"operator" : "+",
+				"value" : 5
+			},{
+				"category" : "mood",
+				"type" : "caring",
+				"first" : "initiator",
+				"value" : true
+			},{
+				"category" : "mood",
+				"type" : "happy",
+				"first" : "initiator",
+				"value" : true
+			},{
+				"category" : "mood",
+				"type" : "relaxed",
+				"first" : "responder",
+				"value" : true
+				}]
+		},
+
+		{
+			"name" : "friendMoves",
+			"displayName" : "Your friend decided to sit next to you",
+			"conditions" : [{
+				"category" : "location",
+				"type" : "already-seated",
+				"first" : "initiator",
+				"value" : true
+			},{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "responder",
+				"second" : "initiator",
+				"operator" : ">",
+				"value" : 40 
+			}],
+			"influenceRules" : [],
+			"effects" : [{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "initiator",
+				"second" : "responder",
+				"operator" : "+",
+				"value" : 10
+			},{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "responder",
+				"second" : "initiator",
+				"operator" : "+",
+				"value" : 5
+			},{
+				"category" : "mood",
+				"type" : "happy",
+				"first" : "initiator",
+				"value" : true
+			},{
+				"category" : "mood",
+				"type" : "relaxed",
+				"first" : "initiator",
+				"value" : true
+			},{
+				"category" : "mood",
+				"type" : "excited",
+				"first" : "responder",
+				"value" : true
+			},{
+				"category" : "socialRecordLabel",
+				"type" : "sitting-with",
+				"first" : "initiator",
+				"second" : "responder",
+				"value" : true
+			},{
+				"category" : "socialRecordLabel",
+				"type" : "sitting-with",
+				"first" : "responder",
+				"second" : "initiator",
+				"value" : true
+				}]
+			
+		},
+
+
+	{
+			"name" : "RAISESELFPERCEPTION",
+			"intent" :  {
+				"category" : "feeling",
+				"type" : "self-awareness",
+				"intentType" : true,
+				"first" : "initiator",
+				"second" : "responder"	
+			},
+			"conditions" : [],
+			"influenceRules" : [],
+			"leadsTo" : ["DEFLECTION"]
+		},
+
+		{
+			"name" : "DEFLECTION",
+			"conditions" : [{
+				"category" : "socialRecordLabelUndirected",
+				"type" : "aggressor",
+				"first" : "initiator",
+				"value" : true
+				}],
+			"influenceRules" : [],
+			"leadsTo" : ["ColorblindnessSuccess"]	
+		},
+
+		{
+			"name" : "ColorblindnessSuccess",
+			"displayName" : "You feel better about yourself",
+			"conditions" : [{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "initiator",
+				"second" : "responder",
+				"operator" : "<",
+				"value" : 20
+			},{
+				"category" : "ethnicity",
+				"type" : "black",
+				"first" : "initiator",
+				"value" : false
+			},{
+				"category" : "ethnicity",
+				"type" : "latino",
+				"first" : "initiator",
+				"value" : false
+				}],
+			"influenceRules" : [{
+				"name" : "White people that aren't close friends with minorities are more likely to practice colorblindness",
+				"conditions" : [{
+					"category" : "ethnicity",
+					"type" : "caucasian",
+					"first" : "initiator",
+					"value" : true
+					},{
+						"category" : "ethnicity",
+						"type" : "black",
+						"first" : "responder",
+						"value" : true
+					},{
+						"category" : "feeling",
+						"type" : "friendship",
+						"first" : "initiator",
+						"second" : "responder",
+						"operator" : "<",
+						"value" : 30
+						}],
+						"weight" : 2
+				}],
+				"effects" : [{
+					"category" : "attribute",
+					"type" : "self-perception",
+					"first" : "initiator",
+					"operator" : "+",
+					"value" : 20
+				},{
+					"category" : "mood",
+					"type" : "angry",
+					"first" : "responder",
+					"value" : true
+						}]
+		},
+
+		{
+			"name" : "RAISEAWKWARDNESS",
+			"intent" : {
+				"category" : "feeling",
+				"type" : "awkwardness",
+				"intentType" : true,
+				"first" : "initiator",
+				"second" : "responder"
+ 			},
+ 			"conditions" : [],
+ 			"influenceRules" : [],
+ 			"leadsTo" : ["DOMICROAGGRO"]
+		},
+
+		{
+			"name" : "LOWERAWKWARDNESS",
+			"intent" : {
+				"category" : "feeling",
+				"type" : "awkwardness",
+				"intentType" : false,
+				"first" : "initiator",
+				"second" : "responder"
+			},
+			"conditions" : [],
+			"influenceRules" : [],
+			"leadsTo" : ["ASKABOUTTHEM"]
+			
+		},
+
+		{
+			"name" : "ASKABOUTTHEM",
+			"conditions" : [],
+			"influenceRules" : [],
+			"leadsTo" : ["iceBreakers"]
+		},
+
+		{
+			"name" : "iceBreakers",
+			"displayName" : "You ask them something simple to guage how they're feeling",
+			"conditions" : [{
+				"category" : "largerEmotionalGroups",
+				"type" : "negative",
+				"first" : "responder",
+				"value" : false
+				}],
+			"influenceRules" : [],
+			"effects" : [{
+				"category" : "feeling",
+				"type" : "awkwardness",
+				"first" : "initiator",
+				"second" : "responder",
+				"operator" : "-",
+				"value" : 10
+			},{
+				"category" : "feeling",
+				"type" : "awkwardness",
+				"first" : "responder",
+				"second" : "initiator",
+				"operator" : "-",
+				"value" : 10
+			},{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "responder",
+				"second" : "initiator",
+				"operator" : "+",
+				"value" : 5
+				}]
+     
+		},
+
+
+		{
+			"name" : "DOMICROAGGRO",
+			"conditions" : [],
+			"influenceRules" : [],
+			"leadsTo" : ["aggressionOccurred"]
+		},	
+		
+		{
+			"name" : "aggressionOccurred",
+			"displayName" : "microaggression happened!",
+			"conditions" : [{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "initiator",
+				"second" : "responder",
+				"value" : 20,
+				"operator" : "<"
+			},{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "responder",
+				"second" : "initiator",
+				"value" : 20,
+				"operator" : "<"
+			}],
+			"influenceRules" : [],
+			"effects" : [{
+				"category" : "socialRecordLabel",
+				"type" : "microaggression-happened",
+				"first" : "initiator",
+				"second" : "responder",
+				"value" : true 
+				}]
+
+		}
+
+	
+		
+	
+	
+		
+	
+	]
+}

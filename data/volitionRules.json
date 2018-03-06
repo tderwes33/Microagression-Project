@@ -1,0 +1,899 @@
+{
+	"fileName": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+	"type": "volition",
+	"rules": [
+		{
+			"name": "People with a positive attitude generally want to increase friendship with other people",
+			"conditions": [
+				{
+					"category": "largerEmotionalGroups",
+					"type": "positive",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "someone",
+					"second": "other",
+					"weight": 5,
+					"intentType": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_6",
+			"type": "volition"
+		},
+		{
+			"name": "When someone has a negative attitude, they generally don't want to increase friendship with others",
+			"conditions": [
+				{
+					"category": "largerEmotionalGroups",
+					"type": "negative",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "someone",
+					"second": "other",
+					"weight": -5,
+					"intentType": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_7",
+			"type": "volition"
+		},
+		{
+			"name": "Pretentious people generally believe they're too good for friends and mainly want to increase their view of themselves",
+			"conditions": [
+				{
+					"category": "mood",
+					"type": "pretentious",
+					"first": "someone",
+					"value": true
+				},
+				{
+					"category": "trait",
+					"type": "anyone",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "someone",
+					"weight": -1,
+					"intentType": true,
+					"value": true,
+					"second": "other"
+				},
+				{
+					"category": "attribute",
+					"type": "self-perception",
+					"first": "someone",
+					"weight": 2,
+					"intentType": true,
+					"value": true
+				},
+				{
+					"category": "feeling",
+					"type": "tension",
+					"first": "someone",
+					"weight": 1,
+					"intentType": true,
+					"value": true,
+					"second": "other"
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_8",
+			"type": "volition"
+		},
+		{
+			"name": "Neutral people generally want to focus on self-improvement rather than socializing",
+			"conditions": [
+				{
+					"category": "mood",
+					"type": "neutral",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "attribute",
+					"type": "intelligence",
+					"first": "someone",
+					"weight": 2,
+					"intentType": true
+				},
+				{
+					"category": "feeling",
+					"type": "calmness",
+					"first": "someone",
+					"weight": 3,
+					"intentType": true,
+					"value": true,
+					"second": "other"
+				},
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "someone",
+					"weight": -1,
+					"intentType": true,
+					"value": true,
+					"second": "other"
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_9",
+			"type": "volition"
+		},
+		{
+			"name": "Lonely people desperately want to increase friendship with others, but their desperation leads to more awkward encounters",
+			"conditions": [
+				{
+					"category": "mood",
+					"type": "lonely",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "someone",
+					"weight": 5,
+					"intentType": true,
+					"value": true,
+					"second": "other"
+				},
+				{
+					"category": "feeling",
+					"type": "awkwardness",
+					"first": "someone",
+					"weight": 5,
+					"intentType": true,
+					"value": true,
+					"second": "other"
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_10",
+			"type": "volition"
+		},
+		{
+			"name": "Goofy people generally want to increase friendship, but their personality usually doesn't mesh well with others",
+			"conditions": [
+				{
+					"category": "mood",
+					"type": "goofy",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "someone",
+					"second": "other",
+					"weight": 5,
+					"intentType": true
+				},
+				{
+					"category": "feeling",
+					"type": "awkwardness",
+					"first": "someone",
+					"second": "other",
+					"weight": 2,
+					"intentType": true,
+					"value": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_11",
+			"type": "volition"
+		},
+		{
+			"name": "Relaxed people want to decrease stressful environments and increase calmness",
+			"conditions": [
+				{
+					"category": "mood",
+					"type": "relaxed",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "someone",
+					"second": "other",
+					"weight": 1,
+					"intentType": true
+				},
+				{
+					"category": "feeling",
+					"type": "calmness",
+					"first": "someone",
+					"second": "other",
+					"weight": 5,
+					"intentType": true,
+					"value": true
+				},
+				{
+					"category": "feeling",
+					"type": "stress",
+					"first": "someone",
+					"second": "other",
+					"weight": 5,
+					"intentType": false,
+					"value": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_12",
+			"type": "volition"
+		},
+		{
+			"name": "Confused people generally want to increase friendship and decrease tension, but also increase awkwardness",
+			"conditions": [
+				{
+					"category": "mood",
+					"type": "confused",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "someone",
+					"second": "other",
+					"weight": 1,
+					"intentType": true
+				},
+				{
+					"category": "feeling",
+					"type": "awkwardness",
+					"first": "someone",
+					"second": "other",
+					"weight": 2,
+					"intentType": true,
+					"value": true
+				},
+				{
+					"category": "feeling",
+					"type": "tension",
+					"first": "someone",
+					"second": "other",
+					"weight": 5,
+					"intentType": false,
+					"value": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_13",
+			"type": "volition"
+		},
+		{
+			"name": "When someone is feeling personally-attacked after a microaggression, they have a difficult time wanting to talk to their aggressor for a while",
+			"conditions": [
+				{
+					"category": "socialRecordLabelUndirected",
+					"type": "personally-attacked",
+					"first": "someone",
+					"value": true
+				},
+				{
+					"category": "socialRecordLabelUndirected",
+					"type": "aggressor",
+					"first": "other",
+					"value": true
+				},
+				{
+					"category": "socialRecordLabel",
+					"type": "microaggression-happened",
+					"first": "other",
+					"value": true,
+					"second": "someone"
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "someone",
+					"second": "other",
+					"weight": -10,
+					"intentType": true
+				},
+				{
+					"category": "feeling",
+					"type": "tension",
+					"first": "someone",
+					"second": "other",
+					"weight": 5,
+					"intentType": true,
+					"value": true
+				},
+				{
+					"category": "feeling",
+					"type": "awkwardness",
+					"first": "someone",
+					"second": "other",
+					"weight": 10,
+					"intentType": true,
+					"value": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_14",
+			"type": "volition"
+		},
+		{
+			"name": "People generally want to get closer to smart Main Characters",
+			"conditions": [
+				{
+					"category": "attribute",
+					"type": "intelligence",
+					"first": "someone",
+					"value": 29,
+					"operator": ">"
+				},
+				{
+					"category": "trait",
+					"type": "anyone",
+					"first": "other",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "other",
+					"second": "someone",
+					"weight": 10,
+					"intentType": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_15",
+			"type": "volition"
+		},
+		{
+			"name": "People generally want to listen to persuasive main characters",
+			"conditions": [
+				{
+					"category": "trait",
+					"type": "named mc1",
+					"first": "someone",
+					"value": true
+				},
+				{
+					"category": "attribute",
+					"type": "persuasiveness",
+					"first": "someone",
+					"value": 29,
+					"operator": ">"
+				},
+				{
+					"category": "trait",
+					"type": "anyone",
+					"first": "other",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "other",
+					"second": "someone",
+					"weight": 5,
+					"intentType": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_16",
+			"type": "volition"
+		},
+		{
+			"name": "People want to learn stuff",
+			"conditions": [
+				{
+					"category": "trait",
+					"type": "anyone",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "attribute",
+					"type": "intelligence",
+					"first": "someone",
+					"weight": 5,
+					"intentType": true,
+					"value": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_17",
+			"type": "volition"
+		},
+		{
+			"name": "People desire to increase their ability to persuade others",
+			"conditions": [
+				{
+					"category": "trait",
+					"type": "anyone",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "attribute",
+					"type": "persuasiveness",
+					"first": "someone",
+					"weight": 3,
+					"intentType": true,
+					"value": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_18",
+			"type": "volition"
+		},
+		{
+			"name": "People generally want to make friends",
+			"conditions": [
+				{
+					"category": "trait",
+					"type": "anyone",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "someone",
+					"second": "other",
+					"weight": 5,
+					"intentType": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_19",
+			"type": "volition"
+		},
+		{
+			"name": "If people don't have a lot of friendship, they tend to want to increase awkwardness",
+			"conditions": [
+				{
+					"category": "trait",
+					"type": "anyone",
+					"first": "someone",
+					"value": true
+				},
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "someone",
+					"value": 20,
+					"operator": "<",
+					"second": "other"
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "awkwardness",
+					"first": "someone",
+					"second": "other",
+					"weight": 5,
+					"intentType": true,
+					"value": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_20",
+			"type": "volition"
+		},
+		{
+			"name": "When someone is too-smart, they want to take a break from studying and others want to befriend them",
+			"conditions": [
+				{
+					"category": "trait",
+					"type": "anyone",
+					"first": "someone",
+					"value": true
+				},
+				{
+					"category": "socialRecordLabelUndirected",
+					"type": "too-smart",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "attribute",
+					"type": "intelligence",
+					"first": "someone",
+					"weight": -5,
+					"intentType": true,
+					"value": true
+				},
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "other",
+					"second": "someone",
+					"weight": 5,
+					"intentType": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_21",
+			"type": "volition"
+		},
+		{
+			"name": "When someone realizes they've offended another person, they want to make the situation less tense and awkward.",
+			"conditions": [
+				{
+					"category": "socialRecordLabel",
+					"type": "microaggression-happened",
+					"first": "someone",
+					"value": true,
+					"second": "other"
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "awkwardness",
+					"first": "someone",
+					"second": "other",
+					"weight": -10,
+					"intentType": true,
+					"value": true
+				},
+				{
+					"category": "feeling",
+					"type": "tension",
+					"first": "someone",
+					"second": "other",
+					"weight": -5,
+					"intentType": true,
+					"value": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_22",
+			"type": "volition"
+		},
+		{
+			"name": "Devin's personality affects his relationship with others",
+			"conditions": [
+				{
+					"category": "personality",
+					"type": "introvert",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "awkwardness",
+					"first": "someone",
+					"second": "other",
+					"weight": 5,
+					"intentType": true,
+					"value": true
+				},
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "someone",
+					"second": "other",
+					"weight": 5,
+					"intentType": true
+				},
+				{
+					"category": "feeling",
+					"type": "calmness",
+					"first": "someone",
+					"second": "other",
+					"weight": 5,
+					"intentType": true,
+					"value": true
+				},
+				{
+					"category": "attribute",
+					"type": "self-perception",
+					"first": "someone",
+					"weight": 5,
+					"intentType": false,
+					"value": true
+				},
+				{
+					"category": "attribute",
+					"type": "persuasiveness",
+					"first": "someone",
+					"weight": -3,
+					"intentType": true,
+					"value": true
+				},
+				{
+					"category": "attribute",
+					"type": "intelligence",
+					"first": "someone",
+					"weight": 5,
+					"intentType": true,
+					"value": true
+				},
+				{
+					"category": "feeling",
+					"type": "awkwardness",
+					"first": "other",
+					"second": "someone",
+					"weight": -10,
+					"intentType": true,
+					"value": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_23",
+			"type": "volition"
+		},
+		{
+			"name": "Black characters are more tense in STEM classrooms ",
+			"conditions": [
+				{
+					"category": "ethnicity",
+					"type": "black",
+					"first": "someone",
+					"value": true
+				},
+				{
+					"category": "location",
+					"type": "in-class",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "tension",
+					"first": "someone",
+					"second": "other",
+					"weight": 5,
+					"intentType": true,
+					"value": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_24",
+			"type": "volition"
+		},
+		{
+			"name": "If someone is labeled an \"aggresor\" they want to raise their self-perception to feel better about themselves",
+			"conditions": [
+				{
+					"category": "socialRecordLabelUndirected",
+					"type": "aggressor",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "self-awareness",
+					"first": "someone",
+					"weight": 5,
+					"intentType": true,
+					"value": true,
+					"second": "other"
+				},
+				{
+					"category": "feeling",
+					"type": "self-awareness",
+					"first": "other",
+					"weight": 1,
+					"intentType": true,
+					"value": true,
+					"second": "someone"
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_25",
+			"type": "volition"
+		},
+		{
+			"name": "Julia's personality affects her relationship with others",
+			"conditions": [
+				{
+					"category": "personality",
+					"type": "battlehardened",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "calmness",
+					"first": "someone",
+					"second": "other",
+					"weight": 5,
+					"intentType": true,
+					"value": true
+				},
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "someone",
+					"second": "other",
+					"weight": 2,
+					"intentType": true
+				},
+				{
+					"category": "attribute",
+					"type": "intelligence",
+					"first": "someone",
+					"weight": 10,
+					"intentType": true,
+					"value": true
+				},
+				{
+					"category": "feeling",
+					"type": "awkwardness",
+					"first": "someone",
+					"second": "other",
+					"weight": -10,
+					"intentType": true,
+					"value": true
+				},
+				{
+					"category": "feeling",
+					"type": "stress",
+					"first": "someone",
+					"second": "other",
+					"weight": 5,
+					"intentType": true,
+					"value": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_26",
+			"type": "volition"
+		},
+		{
+			"name": "Chase's personality affects his relationship with others",
+			"conditions": [
+				{
+					"category": "personality",
+					"type": "nerdy-dudebro",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "someone",
+					"second": "other",
+					"weight": 5,
+					"intentType": true
+				},
+				{
+					"category": "feeling",
+					"type": "awkwardness",
+					"first": "someone",
+					"second": "other",
+					"weight": 2,
+					"intentType": true,
+					"value": true
+				},
+				{
+					"category": "feeling",
+					"type": "calmness",
+					"first": "someone",
+					"second": "other",
+					"weight": 5,
+					"intentType": true,
+					"value": true
+				},
+				{
+					"category": "feeling",
+					"type": "tension",
+					"first": "other",
+					"second": "someone",
+					"weight": 3,
+					"intentType": true,
+					"value": true
+				},
+				{
+					"category": "feeling",
+					"type": "awkwardness",
+					"first": "other",
+					"second": "someone",
+					"weight": -3,
+					"intentType": true,
+					"value": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_27",
+			"type": "volition"
+		},
+		{
+			"name": "People can sense extremely awkward circumstances and will try to decrease awkwardness when it gets progressively worse",
+			"conditions": [
+				{
+					"category": "feeling",
+					"type": "awkwardness",
+					"first": "someone",
+					"value": 50,
+					"operator": ">",
+					"second": "other"
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "awkwardness",
+					"first": "someone",
+					"weight": 10,
+					"intentType": false,
+					"value": true,
+					"second": "other"
+				},
+				{
+					"category": "feeling",
+					"type": "awkwardness",
+					"first": "someone",
+					"weight": 10,
+					"intentType": false,
+					"value": true,
+					"second": "other"
+				},
+				{
+					"category": "feeling",
+					"type": "awkwardness",
+					"first": "other",
+					"weight": 1,
+					"intentType": false,
+					"value": true,
+					"second": "someone"
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"id": "volitionRules_28",
+			"type": "volition"
+		}
+	]
+}

@@ -1,0 +1,204 @@
+{
+	"fileName": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/triggerRules.json",
+	"type": "trigger",
+	"rules": [
+		{
+			"name": "If someone maxes Friendship towards another person, they can begin increasing Empathy with that person",
+			"conditions": [
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "someone",
+					"value": 100,
+					"operator": "=",
+					"second": "other"
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "empathy",
+					"first": "someone",
+					"second": "other",
+					"value": 10,
+					"operator": "+"
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/triggerRules.json",
+			"id": "triggerRules_1",
+			"type": "trigger"
+		},
+		{
+			"name": "When People do Microaggressions, the recipient becomes uncomfortable and feels personally-attacked",
+			"conditions": [
+				{
+					"category": "socialRecordLabel",
+					"type": "microaggression-happened",
+					"first": "someone",
+					"value": true,
+					"second": "other"
+				}
+			],
+			"effects": [
+				{
+					"category": "socialRecordLabelUndirected",
+					"type": "personally-attacked",
+					"first": "other",
+					"value": true
+				},
+				{
+					"category": "mood",
+					"type": "uncomfortable",
+					"first": "other",
+					"value": true
+				},
+				{
+					"category": "feeling",
+					"type": "tension",
+					"first": "other",
+					"value": 4,
+					"operator": "+",
+					"second": "someone"
+				},
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "other",
+					"value": 2,
+					"operator": "-",
+					"second": "someone"
+				},
+				{
+					"category": "socialRecordLabelUndirected",
+					"type": "aggressor",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/triggerRules.json",
+			"id": "triggerRules_2",
+			"type": "trigger"
+		},
+		{
+			"name": "When someone is in-class and looking for a seat, they want to find their friends",
+			"conditions": [
+				{
+					"category": "trait",
+					"type": "named mc1",
+					"first": "someone",
+					"value": true
+				},
+				{
+					"category": "location",
+					"type": "in-class",
+					"first": "someone",
+					"value": true
+				},
+				{
+					"category": "location",
+					"type": "looking-for-seat",
+					"first": "someone",
+					"value": true
+				},
+				{
+					"category": "location",
+					"type": "in-class",
+					"first": "other",
+					"value": true
+				},
+				{
+					"category": "location",
+					"type": "already-seated",
+					"first": "other",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "socialRecordLabel",
+					"type": "wants-to-sit-next-to",
+					"first": "someone",
+					"value": true,
+					"second": "other"
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/triggerRules.json",
+			"id": "triggerRules_3",
+			"type": "trigger"
+		},
+		{
+			"name": "Particular emotions are classified as Positive People",
+			"conditions": [
+				{
+					"category": "mood",
+					"type": "happy",
+					"first": "someone",
+					"value": true
+				},
+				{
+					"category": "mood",
+					"type": "caring",
+					"first": "someone",
+					"value": true
+				},
+				{
+					"category": "mood",
+					"type": "excited",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "largerEmotionalGroups",
+					"type": "positive",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/triggerRules.json",
+			"id": "triggerRules_4",
+			"type": "trigger"
+		},
+		{
+			"name": "People with particular emotions are classifed as negative",
+			"conditions": [
+				{
+					"category": "mood",
+					"type": "angry",
+					"first": "someone",
+					"value": true
+				},
+				{
+					"category": "mood",
+					"type": "discouraged",
+					"first": "someone",
+					"value": true
+				},
+				{
+					"category": "mood",
+					"type": "uptight",
+					"first": "someone",
+					"value": true
+				},
+				{
+					"category": "mood",
+					"type": "uncomfortable",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "largerEmotionalGroups",
+					"type": "negative",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/triggerRules.json",
+			"id": "triggerRules_5",
+			"type": "trigger"
+		}
+	]
+}
