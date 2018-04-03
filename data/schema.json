@@ -112,25 +112,6 @@
 			"defaultValue": false
 		},
 		{
-			"actionable": false,
-			"directionType": "undirected",
-			"isBoolean": true,
-			"cloneEachTimeStep": true,
-			"duration": 5,
-			"category": "socialRecordLabelUndirected",
-			"types": [
-				"self-involved",
-				"selfless",
-				"self-improvement-failure",
-				"personally-attacked",
-				"aggressor",
-				"too-smart",
-				"exposed",
-				"not-exposed"
-			],
-			"defaultValue": false
-		},
-		{
 			"actionable": true,
 			"directionType": "undirected",
 			"isBoolean": false,
@@ -233,7 +214,29 @@
 				"microaggression-happened",
 				"aggressioned-recognized",
 				"sitting-with",
-				"recentnicething"
+				"recentnicething",
+				"recenthangout",
+				"recentnicefail"
+			],
+			"defaultValue": false
+		},
+		{
+			"actionable": false,
+			"directionType": "undirected",
+			"isBoolean": true,
+			"cloneEachTimeStep": true,
+			"duration": 5,
+			"category": "socialRecordLabelUndirected",
+			"types": [
+				"self-involved",
+				"selfless",
+				"self-improvement-failure",
+				"personally-attacked",
+				"aggressor",
+				"too-smart",
+				"exposed",
+				"not-exposed",
+				"recentclassnap"
 			],
 			"defaultValue": false
 		}

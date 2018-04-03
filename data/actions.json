@@ -17,8 +17,37 @@
 
 		{
 			"name" : "STUDY",
-			"conditions" : [],
-			"influenceRules" : [],
+			"conditions" : [{
+				"category" : "location",
+				"type" : "in-class",
+				"first" : "initiator",
+				"value" : false
+			},{
+				"category" : "location",
+				"type" : "already-seated",
+				"first" : "initiator",
+				"value" : false
+					}],
+			"influenceRules" : [{
+				"name" : "People with a decent amount of intelligence like studying at home",
+				"conditions" : [{
+					"category" : "attribute",
+					"type" : "intelligence",
+					"first" : "initiator",
+					"operator" : ">",
+					"value" : 10
+					}],
+					"weight" : 2
+				},{
+				"name" : "People that are too-smart don't feel like studying alone",
+				"conditions" : [{
+					"category" : "socialRecordLabelUndirected",
+					"type" : "too-smart",
+					"first" : "initiator",
+					"value" : true
+					}],
+					"weight" : -4	
+				}],
 			"leadsTo" : ["studyMath","studyWriting","superStudy"]
 		},
 
@@ -91,7 +120,7 @@
 				"category" : "attribute",
 				"type" : "intelligence",
 				"first" : "initiator",
-				"value" : 19,
+				"value" : 29,
 				"operator" : ">"
 			}],
 			"displayName" : "Super Study",
@@ -118,7 +147,12 @@
 				"type" : "too-smart",
 				"first" : "initiator",
 				"value" : true
-			}]
+			},{
+				"category" : "mood",
+				"type" : "tired",
+				"first" : "initiator",
+				"value" : true
+				}]
 		},
 
 {
@@ -133,6 +167,15 @@
 				"value" : true 
 				}],
 			"weight" : 3
+		},{
+			"name" : "People who have recently slept in class are less likely to go immediately",
+			"conditions" : [{
+				"category" : "socialRecordLabelUndirected",
+				"type" : "recentclassnap",
+				"first" : "initiator",
+				"value" : true
+				}],
+				"weight" : -3
 			}],
 		"leadsTo" : ["findSeat", "listenToLecture", "sleepInLecture"]
 	},
@@ -146,7 +189,22 @@
 			"value" : false
 			}],
 		"displayName" : "looking for a seat",
-		"influenceRules" : [],
+		"influenceRules" : [{
+			"name" : "Negative people with low intelligence are more likely to go to class rather than studying independently",
+			"conditions" : [{
+				"category" : "attribute",
+				"type" : "intelligence",
+				"first" : "initiator",
+				"operator" : "<",
+				"value" : 10
+			},{
+				"category" : "largerEmotionalGroups",
+				"type" : "negative",
+				"first" : "initiator",
+				"value" : true
+				}],
+				"weight" : 3
+			}],
 		"effects" : [{
 			"category" : "location",
 			"type" : "in-class",
@@ -192,6 +250,21 @@
 			"first" : "initiator",
 			"operator" : "+",
 			"value" : 10
+		},{
+			"category" : "location",
+			"type" : "in-class",
+			"first" : "initiator",
+			"value" : false
+		},{
+			"category" : "location",
+			"type" : "already-seated",
+			"first" : "initiator",
+			"value" : false
+		},{
+			"category" : "mood",
+			"type" : "confused",
+			"first" : "initiator",
+			"value" : false
 			}]
 	},
 
@@ -236,6 +309,26 @@
 			"type" : "tired",
 			"first" : "initiator",
 			"value" : false
+		},{
+			"category" : "location",
+			"type" : "already-seated",
+			"first" : "initiator",
+			"value" : false
+		},{
+			"category" : "location",
+			"type" : "in-class",
+			"first" : "initiator",
+			"value" : false
+		},{
+			"category" : "mood",
+			"type" : "confused",
+			"first" : "initiator",
+			"value" : false
+		},{
+			"category" : "socialRecordLabelUndirected",
+			"type" : "recentclassnap",
+			"first" : "initiator",
+			"value" : true
 			}]	
 	},
 
@@ -255,7 +348,17 @@
 
 		{ 
 			"name" : "READ",
-			"conditions" : [],
+			"conditions" : [{
+				"category" : "location",
+				"type" : "in-class",
+				"first" : "initiator",
+				"value" : false
+			},{
+				"category" : "location",
+				"type" : "already-seated",
+				"first" : "initiator",
+				"value" : false
+					}],
 			"influenceRules" : [],
 			"leadsTo" : ["readPersuasiveArticles"]
 
@@ -343,7 +446,17 @@
 		    	"type" : "positive",
 		    	"first" : "initiator",
 		    	"value" : true
-		    }]
+		    },{
+				"category" : "location",
+				"type" : "already-seated",
+				"first" : "initiator",
+				"value" : false
+			},{
+				"category" : "location",
+				"type" : "in-class",
+				"first" : "initiator",
+				"value" : false
+			}]
 		},
 
 	{
@@ -389,7 +502,7 @@
     	},
     	"conditions" : [],
     	"influenceRules" : [],
-    	"leadsTo" : ["WALKTO", "COMPLIMENT", "MAKESMALLTALK", "BEFAKE", "FINDFRIEND"]
+    	"leadsTo" : ["WALKTO", "COMPLIMENT", "MAKESMALLTALK", "BEFAKE", "FINDFRIEND", "HANGOUT"]
 	},
 
 	{
@@ -486,6 +599,15 @@
 						"value" : true
 						}],
 					"weight" : -4	
+				},{
+					"name" : "If a person is feeling not-exposed, then they are more likely to say something nice",
+					"conditions" : [{
+						"category" : "socialRecordLabelUndirected",
+						"type" : "not-exposed",
+						"first" : "initiator",
+						"value" : true
+						}],
+						"weight" : 5
 					}],
 				"effects" : [{
 					"category" : "feeling",
@@ -508,7 +630,7 @@
 					"value" : 5
 				},{
 					"category" : "largerEmotionalGroups",
-					"type" : "positve",
+					"type" : "positive",
 					"first" : "responder",
 					"value" : true 
 				},{
@@ -524,8 +646,8 @@
 			"name" : "niceThingFail",
 			"displayName" : "niceThing <FAIL>",
 			"conditions" : [{
-				"category" : "largerEmotionalGroups",
-				"type" : "negative",
+				"category" : "socialRecordLabelUndirected",
+				"type" : "personally-attacked",
 				"first" : "responder",
 				"value" : true
 				}],
@@ -559,7 +681,16 @@
 				"first" : "responder",
 				"value" : true
 			}],
-			"influenceRules" : [],
+			"influenceRules" : [{
+				"name" : "When people are angry their less likely to accept aggressionMissed actions",
+				"conditions" : [{
+					"category" : "mood",
+					"type" : "angry",
+					"first" : "responder",
+					"value" : true
+					}],
+					"weight" : -4
+				}],
 			"effects" : [{
 				"category" : "feeling",
 				"type" : "friendship",
@@ -594,7 +725,16 @@
 				"operator" : "<",
 				"value" : 20
  				}],
- 			"influenceRules" : [],
+ 			"influenceRules" : [{
+ 				"name" : "People that are negative are more likely to try to be fake",
+ 				"conditions" : [{
+ 					"category" : "largerEmotionalGroups",
+ 					"type" : "negative",
+ 					"first" : "initiator",
+ 					"value" : true
+ 					}],
+ 					"weight" : 5
+ 				}],
  			"leadsTo" : ["pretendYouKnowSuccess", "pretendYouKnowFail"]
 		},
 
@@ -755,7 +895,7 @@
 				"first" : "responder",
 				"second" : "initiator",
 				"operator" : "+",
-				"value" : 5
+				"value" : 8
 			},{
 				"category" : "mood",
 				"type" : "caring",
@@ -838,6 +978,66 @@
 
 
 	{
+		"name" : "HANGOUT",
+		"conditions" : [{
+			"category" : "feeling",
+			"type" : "friendship",
+			"first" : "initiator",
+			"second" : "responder",
+			"operator" : ">",
+			"value" : 20
+		},{
+			"category" : "feeling",
+			"type" : "friendship",
+			"first" : "responder",
+			"second" : "initiator",
+			"operator" : ">",
+			"value" : 20
+		},{
+			"category" : "communication",
+			"type" : "talking",
+			"first" : "initiator",
+			"second" : "responder",
+			"value" : true
+			}],
+		"influenceRules" : [],
+		"leadsTo" : ["spendTime"]	
+	},
+
+	{
+		"name" : "spendTime",
+		"displayName" : "You hang out with your friend",
+		"conditions" : [],
+		"influenceRules" : [],
+		"effects" : [{
+			"category" : "feeling",
+			"type" : "friendship",
+			"first" : "initiator",
+			"second" : "responder",
+			"operator" : "+",
+			"value" : 25
+		},{
+			"category" : "feeling",
+			"type" : "friendship",
+			"first" : "responder",
+			"second" : "initiator",
+			"operator" : "+",
+			"value" : 25
+		},{
+			"category" : "mood",
+			"type" : "happy",
+			"first" : "initiator",
+			"value" : true
+		},{
+			"category" : "mood",
+			"type" : "happy",
+			"first" : "responder",
+			"value" : true
+			}]
+	},
+
+
+	{
 			"name" : "RAISESELFPERCEPTION",
 			"intent" :  {
 				"category" : "feeling",
@@ -905,7 +1105,27 @@
 						"value" : 30
 						}],
 						"weight" : 2
-				}],
+				},{
+					"name" : "People with high self-perception are less likely to do colorblindness actions",
+					"conditions" : [{
+						"category" : "attribute",
+						"type" : "self-perception",
+						"first" : "initiator",
+						"value" : 15,
+						"operator" : ">"
+						}],
+						"weight" : -10
+				},{
+					"name" : "When microaggression-happened occurs, the initiator is more likely to say color-blind things",
+					"conditions" : [{
+						"category" : "socialRecordLabel",
+						"type" : "microaggression-happened",
+						"first" : "initiator",
+						"second" : "responder",
+						"value" : true
+						}],
+						"weight" : 3
+					}],
 				"effects" : [{
 					"category" : "attribute",
 					"type" : "self-perception",
@@ -1017,7 +1237,28 @@
 				"value" : 20,
 				"operator" : "<"
 			}],
-			"influenceRules" : [],
+			"influenceRules" : [
+			{
+				"name" : "When microagressions have happened, people are less likely to do them again with that person",
+				"conditions" : [{
+				"category" : "socialRecordLabel",
+				"type" : "microaggression-happened",
+				"first" : "initiator",
+				"second" : "responder",
+				"value" : true
+				}],
+				"weight" : -10
+			},{
+				"name" : "People with high self-perception are less likely to do colorblindness actions",
+					"conditions" : [{
+						"category" : "attribute",
+						"type" : "self-perception",
+						"first" : "initiator",
+						"value" : 15,
+						"operator" : ">"
+						}],
+						"weight" : -10
+					}],
 			"effects" : [{
 				"category" : "socialRecordLabel",
 				"type" : "microaggression-happened",

@@ -1,5 +1,5 @@
 {
-	"fileName": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+	"fileName": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 	"type": "volition",
 	"rules": [
 		{
@@ -22,7 +22,7 @@
 					"intentType": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_6",
 			"type": "volition"
 		},
@@ -46,7 +46,7 @@
 					"intentType": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_7",
 			"type": "volition"
 		},
@@ -94,7 +94,7 @@
 					"second": "other"
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_8",
 			"type": "volition"
 		},
@@ -135,7 +135,7 @@
 					"second": "other"
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_9",
 			"type": "volition"
 		},
@@ -169,7 +169,7 @@
 					"second": "other"
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_10",
 			"type": "volition"
 		},
@@ -202,7 +202,7 @@
 					"value": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_11",
 			"type": "volition"
 		},
@@ -244,7 +244,7 @@
 					"value": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_12",
 			"type": "volition"
 		},
@@ -286,7 +286,7 @@
 					"value": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_13",
 			"type": "volition"
 		},
@@ -341,7 +341,7 @@
 					"value": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_14",
 			"type": "volition"
 		},
@@ -372,7 +372,7 @@
 					"intentType": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_15",
 			"type": "volition"
 		},
@@ -409,7 +409,7 @@
 					"intentType": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_16",
 			"type": "volition"
 		},
@@ -428,12 +428,19 @@
 					"category": "attribute",
 					"type": "intelligence",
 					"first": "someone",
-					"weight": 5,
+					"weight": 3,
 					"intentType": true,
 					"value": true
+				},
+				{
+					"category": "attribute",
+					"type": "intelligence",
+					"first": "someone",
+					"weight": 1,
+					"intentType": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_17",
 			"type": "volition"
 		},
@@ -457,7 +464,7 @@
 					"value": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_18",
 			"type": "volition"
 		},
@@ -481,7 +488,7 @@
 					"intentType": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_19",
 			"type": "volition"
 		},
@@ -514,7 +521,7 @@
 					"value": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_20",
 			"type": "volition"
 		},
@@ -536,14 +543,6 @@
 			],
 			"effects": [
 				{
-					"category": "attribute",
-					"type": "intelligence",
-					"first": "someone",
-					"weight": -5,
-					"intentType": true,
-					"value": true
-				},
-				{
 					"category": "feeling",
 					"type": "friendship",
 					"first": "other",
@@ -552,7 +551,7 @@
 					"intentType": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_21",
 			"type": "volition"
 		},
@@ -587,7 +586,7 @@
 					"value": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_22",
 			"type": "volition"
 		},
@@ -662,7 +661,7 @@
 					"value": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_23",
 			"type": "volition"
 		},
@@ -693,7 +692,7 @@
 					"value": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_24",
 			"type": "volition"
 		},
@@ -727,7 +726,7 @@
 					"second": "someone"
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_25",
 			"type": "volition"
 		},
@@ -786,7 +785,7 @@
 					"value": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_26",
 			"type": "volition"
 		},
@@ -846,7 +845,7 @@
 					"value": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_27",
 			"type": "volition"
 		},
@@ -891,9 +890,119 @@
 					"second": "someone"
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/volitionRules.json",
 			"id": "volitionRules_28",
+			"type": "volition",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json"
+		},
+		{
+			"name": "H E L P",
+			"conditions": [
+				{
+					"category": "socialRecordLabel",
+					"type": "recentnicething",
+					"first": "someone",
+					"value": true,
+					"second": "other"
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "awkwardness",
+					"first": "someone",
+					"weight": 5,
+					"intentType": true,
+					"value": true,
+					"second": "other"
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
+			"id": "volitionRules_29",
 			"type": "volition"
+		},
+		{
+			"name": "Persuasive People generally enjoy finding new ways to increase their talent",
+			"conditions": [
+				{
+					"category": "attribute",
+					"type": "persuasiveness",
+					"first": "someone",
+					"value": 30,
+					"operator": ">"
+				}
+			],
+			"effects": [
+				{
+					"category": "attribute",
+					"type": "persuasiveness",
+					"first": "someone",
+					"weight": 3,
+					"intentType": true,
+					"value": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
+			"id": "volitionRules_30",
+			"type": "volition"
+		},
+		{
+			"name": "Confused people feel discouraged from learning more ",
+			"conditions": [
+				{
+					"category": "mood",
+					"type": "confused",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "attribute",
+					"type": "intelligence",
+					"first": "someone",
+					"weight": -3,
+					"intentType": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
+			"id": "volitionRules_31",
+			"type": "volition"
+		},
+		{
+			"name": "People with a lot of persuasiveness are more likely to talk to others",
+			"conditions": [
+				{
+					"category": "attribute",
+					"type": "persuasiveness",
+					"first": "someone",
+					"value": 40,
+					"operator": ">"
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "someone",
+					"weight": 5,
+					"intentType": true,
+					"value": true,
+					"second": "other"
+				},
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "someone",
+					"weight": 2,
+					"intentType": true,
+					"value": true,
+					"second": "other"
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
+			"id": "volitionRules_33",
+			"type": "volition",
+			"isActive": true
 		}
 	]
 }
