@@ -238,7 +238,16 @@
 			"value" : true
 			}],
 		"displayName" : "You listen attentively and learn the material",
-		"influenceRules" : [],
+		"influenceRules" : [{
+			"name" : "Relaxed People are more likely to effectively listen to lectures",
+			"conditions" : [{
+				"category" : "mood",
+				"type" : "relaxed",
+				"first" : "initiator",
+				"value" : true
+				}],
+			"weight" : 10
+			}],
 		"effects" : [{
 			"category" : "mood",
 			"type" : "confident",
@@ -265,7 +274,12 @@
 			"type" : "confused",
 			"first" : "initiator",
 			"value" : false
-			}]
+		},{
+			"category" : "mood",
+			"type" : "relaxed",
+			"first" : "initiator",
+			"value" : false
+				}]
 	},
 
 	{
@@ -608,6 +622,16 @@
 						"value" : true
 						}],
 						"weight" : 5
+				},{
+					"name" : "Really persuasive people are less likely to restort to basic compliments",
+					"conditions" : [{
+						"category" : "attribute",
+						"type" : "persuasiveness",
+						"first" : "initiator",
+						"operator" : ">",
+						"value" : 40
+						}],
+					"weight" : -2	
 					}],
 				"effects" : [{
 					"category" : "feeling",
@@ -839,10 +863,24 @@
 				"category" : "location",
 				"type" : "in-class",
 				"first" : "initiator",
-				"second" : "responder",
 				"value" : true
+			},{
+				"category" : "location",
+				"type" : "in-class",
+				"first" : "responder",
+				"value" : true
+					}],
+			"influenceRules" : [{
+				"name" : "Really persuasive people are more likely to sit next to friends",
+				"conditions" : [{
+					"category" : "attribute",
+					"type" : "persuasiveness",
+					"first" : "initiator",
+					"operator" : ">",
+					"value" : 40
+					}],
+				"weight" : 2	
 				}],
-			"influenceRules" : [],
 			"leadsTo" : ["sitNextTo", "friendMoves"]
 		},
 
@@ -910,6 +948,16 @@
 				"category" : "mood",
 				"type" : "relaxed",
 				"first" : "responder",
+				"value" : true
+			},{
+				"category" : "mood",
+				"type" : "relaxed",
+				"first" : "initiator",
+				"value" : true
+			},{
+				"category" : "location",
+				"type" : "already-seated",
+				"first" : "initiator",
 				"value" : true
 				}]
 		},

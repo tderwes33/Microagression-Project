@@ -1,5 +1,5 @@
 {
-	"fileName": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/triggerRules.json",
+	"fileName": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/triggerRules.json",
 	"type": "trigger",
 	"rules": [
 		{
@@ -24,7 +24,7 @@
 					"operator": "+"
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/triggerRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/triggerRules.json",
 			"id": "triggerRules_1",
 			"type": "trigger"
 		},
@@ -75,7 +75,7 @@
 					"value": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/triggerRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/triggerRules.json",
 			"id": "triggerRules_2",
 			"type": "trigger"
 		},
@@ -122,7 +122,7 @@
 					"second": "other"
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/triggerRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/triggerRules.json",
 			"id": "triggerRules_3",
 			"type": "trigger"
 		},
@@ -156,7 +156,7 @@
 					"value": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/triggerRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/triggerRules.json",
 			"id": "triggerRules_4",
 			"type": "trigger"
 		},
@@ -196,8 +196,52 @@
 					"value": true
 				}
 			],
-			"origin": "/Users/taylordinwiddie/Downloads/Assignment5Domain/data copy/triggerRules.json",
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/triggerRules.json",
 			"id": "triggerRules_5",
+			"type": "trigger"
+		},
+		{
+			"name": "Positive people are not currently negative",
+			"conditions": [
+				{
+					"category": "largerEmotionalGroups",
+					"type": "positive",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "largerEmotionalGroups",
+					"type": "negative",
+					"first": "someone",
+					"value": false
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/triggerRules.json",
+			"id": "triggerRules_6",
+			"type": "trigger"
+		},
+		{
+			"name": "Negative people are not currently positive",
+			"conditions": [
+				{
+					"category": "largerEmotionalGroups",
+					"type": "negative",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "largerEmotionalGroups",
+					"type": "positive",
+					"first": "someone",
+					"value": false
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/triggerRules.json",
+			"id": "triggerRules_7",
 			"type": "trigger"
 		}
 	]
