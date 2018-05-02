@@ -470,7 +470,12 @@
 				"type" : "in-class",
 				"first" : "initiator",
 				"value" : false
-			}]
+			},{
+				"category" : "socialRecordLabelUndirected",
+				"type" : "goodpresentation",
+				"first" : "initiator",
+				"value" : true
+				}]
 		},
 
 	{
@@ -516,7 +521,7 @@
     	},
     	"conditions" : [],
     	"influenceRules" : [],
-    	"leadsTo" : ["WALKTO", "COMPLIMENT", "MAKESMALLTALK", "BEFAKE", "FINDFRIEND", "HANGOUT"]
+    	"leadsTo" : ["WALKTO", "COMPLIMENT", "MAKESMALLTALK", "BEFAKE", "FINDFRIEND", "HANGOUT", "CLASSROOM"]
 	},
 
 	{
@@ -686,7 +691,13 @@
 
 		{
 			"name" : "MAKESMALLTALK",
-			"conditions" : [],
+			"conditions" : [{
+				"category" : "communication",
+				"type" : "talking",
+				"first" : "initiator",
+				"second" : "responder",
+				"value" : true
+				}],
 			"influenceRules" : [],
 			"leadsTo" : ["aggressionMissed"]
 		},
@@ -714,7 +725,16 @@
 					"value" : true
 					}],
 					"weight" : -4
-				}],
+				},{
+				"name" : "People are more likely to do agressionMissed actions to African Americans",
+				"conditions" : [{
+					"category" : "personality",
+					"type" : "introvert",
+					"first" : "responder",
+					"value" : true
+					}],
+					"weight" : 3		
+ 				}],
 			"effects" : [{
 				"category" : "feeling",
 				"type" : "friendship",
@@ -1086,6 +1106,87 @@
 
 
 	{
+		"name" : "CLASSROOM",
+		"conditions" : [],
+		"influenceRules" : [],
+		"leadsTo" : ["GOOFOFF"] 
+	},
+
+	{
+		"name" : "GOOFOFF",
+		"conditions" : [{
+			"category" : "socialRecordLabel",
+			"type" : "sitting-with",
+			"first" : "initiator",
+			"second" : "responder",
+			"value" : true		
+		},{
+			"category" : "socialRecordLabel",
+			"type" : "sitting-with",
+			"first" : "responder",
+			"second" : "initiator",
+			"value" : true
+			}],
+		"influenceRules" : [],
+		"leadsTo" : ["watchVideos"]	
+	},
+
+	{
+		"name" : "watchVideos",
+		"displayName" : "You and your friend don't feel like paying attention",
+		"conditions" : [{
+			"category" : "feeling",
+			"type" : "friendship",
+			"first" : "responder",
+			"second" : "initiator",
+			"operator" : ">",
+			"value" : 15
+			}],
+		"influenceRules" : [],
+		"effects" : [{
+			"category" : "location",
+			"type" : "in-class",
+			"first" : "initiator",
+			"value" : false
+ 		},{
+ 			"category" : "location",
+ 			"type" : "already-seated",
+ 			"first" : "initiator",
+ 			"value" : false
+ 		},{
+ 			"category" : "location",
+			"type" : "in-class",
+			"first" : "responder",
+			"value" : false
+ 		},{
+ 			"category" : "location",
+ 			"type" : "already-seated",
+ 			"first" : "responder",
+ 			"value" : false
+ 		},{
+ 			"category" : "feeling",
+ 			"type" : "friendship",
+ 			"first" : "initiator",
+ 			"second" : "responder",
+ 			"operator" : "+",
+ 			"value" : 15
+ 		},{
+ 			"category" : "feeling",
+ 			"type" : "friendship",
+ 			"first" : "initiator",
+ 			"second" : "responder",
+ 			"operator" : "+",
+ 			"value" : 15
+ 		},{
+ 			"category" : "attribute",
+ 			"type" : "intelligence",
+ 			"first" : "initiator",
+ 			"operator" : "+",
+ 			"value" : 3
+ 			}]	
+	},
+
+	{
 			"name" : "RAISESELFPERCEPTION",
 			"intent" :  {
 				"category" : "feeling",
@@ -1189,20 +1290,6 @@
 		},
 
 		{
-			"name" : "RAISEAWKWARDNESS",
-			"intent" : {
-				"category" : "feeling",
-				"type" : "awkwardness",
-				"intentType" : true,
-				"first" : "initiator",
-				"second" : "responder"
- 			},
- 			"conditions" : [],
- 			"influenceRules" : [],
- 			"leadsTo" : ["DOMICROAGGRO"]
-		},
-
-		{
 			"name" : "LOWERAWKWARDNESS",
 			"intent" : {
 				"category" : "feeling",
@@ -1219,7 +1306,13 @@
 
 		{
 			"name" : "ASKABOUTTHEM",
-			"conditions" : [],
+			"conditions" : [{
+				"category" : "communication",
+				"type" : "talking",
+				"first" : "initiator",
+				"second" : "responder",
+				"value" : true
+				}],
 			"influenceRules" : [],
 			"leadsTo" : ["iceBreakers"]
 		},
@@ -1261,6 +1354,21 @@
 
 
 		{
+			"name" : "RAISEAWKWARDNESS",
+			"intent" : {
+				"category" : "feeling",
+				"type" : "awkwardness",
+				"intentType" : true,
+				"first" : "initiator",
+				"second" : "responder"
+ 			},
+ 			"conditions" : [],
+ 			"influenceRules" : [],
+ 			"leadsTo" : ["DOMICROAGGRO"]
+		},
+
+
+		{
 			"name" : "DOMICROAGGRO",
 			"conditions" : [],
 			"influenceRules" : [],
@@ -1285,8 +1393,7 @@
 				"value" : 20,
 				"operator" : "<"
 			}],
-			"influenceRules" : [
-			{
+			"influenceRules" : [{
 				"name" : "When microagressions have happened, people are less likely to do them again with that person",
 				"conditions" : [{
 				"category" : "socialRecordLabel",
@@ -1298,14 +1405,14 @@
 				"weight" : -10
 			},{
 				"name" : "People with high self-perception are less likely to do colorblindness actions",
-					"conditions" : [{
-						"category" : "attribute",
-						"type" : "self-perception",
-						"first" : "initiator",
-						"value" : 15,
-						"operator" : ">"
-						}],
-						"weight" : -10
+				"conditions" : [{
+					"category" : "attribute",
+					"type" : "self-perception",
+					"first" : "initiator",
+					"value" : 15,
+					"operator" : ">"
+					}],
+					"weight" : -10
 					}],
 			"effects" : [{
 				"category" : "socialRecordLabel",
@@ -1315,6 +1422,116 @@
 				"value" : true 
 				}]
 
+		},
+
+		{
+			"name" : "RAISETENSION",
+			"intent" : {
+				"category" : "feeling",
+				"type" : "tension",
+				"intentType" : true,
+				"first" : "initiator",
+				"second" : "responder"
+ 			},
+ 			"conditions" : [],
+ 			"influenceRules" : [],
+ 			"leadsTo" : ["NEWBOND"]
+		},
+
+		{
+			"name" : "NEWBOND",
+			"conditions" : [],
+			"influenceRules" : [],
+			"leadsTo" : ["badJokes"]
+		},
+
+		{
+			"name" : "badJokes",
+			"displayName" : "You're inexperience with your new friend's sense of humor caused you to make a joke in poor taste",
+			"conditions" : [{
+				"category" : "communication",
+				"type" : "talking",
+				"first" : "initiator",
+				"second" : "responder",
+				"value" : true
+				}],
+			"influenceRules" : [],
+			"effects" : [{
+				"category" : "feeling",
+				"type" : "tension",
+				"first" : "responder",
+				"second" : "initiator",
+				"operator" : "+",
+				"value" : 20
+			},{
+				"category" : "mood",
+				"type" : "uptight",
+				"first" : "responder",
+				"value" : true
+				}]
+		},
+
+		{
+			"name" : "LOWERTENSION",
+			"intent" : {
+				"category" : "feeling",
+				"type" : "tension",
+				"intentType" : false,
+				"first" : "initiator",
+				"second" : "responder"
+ 			},
+ 			"conditions" : [],
+ 			"influenceRules" : [],
+ 			"leadsTo" : ["MAKEAMENDS"]
+		},
+
+		{
+			"name" : "MAKEAMENDS",
+			"conditions" : [{
+				"category" : "feeling",
+				"type" : "tension",
+				"first" : "responder",
+				"second" : "initiator",
+				"operator" : ">",
+				"value" : 15
+				}],
+			"influenceRules" : [],
+			"leadsTo" : ["listenIntently"]
+		},
+
+		{
+			"name" : "listenIntently",
+			"displayName" : "You attempt to solve the problem by carefully listening to their point of view",
+			"conditions" : [{
+				"category" : "communication",
+				"type" : "talking",
+				"first" : "initiator",
+				"second" : "responder",
+				"value" : true
+				}],
+			"influenceRules" : [],
+			"effects" : [{
+				"category" : "feeling",
+				"type" : "tension",
+				"first" : "responder",
+				"second" : "initiator",
+				"operator" : "-",
+				"value" : 15
+			},{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "initiator",
+				"second" : "responder",
+				"operator" : "+",
+				"value" : 15
+			},{
+				"category" : "feeling",
+				"type" : "friendship",
+				"first" : "responder",
+				"second" : "initiator",
+				"operator" : "+",
+				"value" : 15
+				}]
 		}
 
 	

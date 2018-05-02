@@ -4,7 +4,6 @@
 			"actionable": false,
 			"directionType": "undirected",
 			"isBoolean": true,
-			"cloneEachTimeStep": true,
 			"category": "largerEmotionalGroups",
 			"types": [
 				"positive",
@@ -16,7 +15,6 @@
 			"actionable": false,
 			"directionType": "undirected",
 			"isBoolean": true,
-			"cloneEachTimeStep": true,
 			"category": "facialExpressions",
 			"types": [
 				"happy-expression",
@@ -29,7 +27,6 @@
 			"actionable": false,
 			"directionType": "directed",
 			"isBoolean": true,
-			"cloneEachTimeStep": true,
 			"category": "tone",
 			"types": [
 				"blunt",
@@ -44,7 +41,6 @@
 			"actionable": false,
 			"directionType": "undirected",
 			"isBoolean": true,
-			"cloneEachTimeStep": true,
 			"category": "ethnicity",
 			"types": [
 				"black",
@@ -60,7 +56,6 @@
 			"actionable": false,
 			"directionType": "undirected",
 			"isBoolean": true,
-			"cloneEachTimeStep": true,
 			"category": "personality",
 			"types": [
 				"nerdy-dudebro",
@@ -74,7 +69,6 @@
 			"actionable": false,
 			"directionType": "undirected",
 			"isBoolean": true,
-			"cloneEachTimeStep": true,
 			"category": "studyPartnerQuality",
 			"types": [
 				"bad-study",
@@ -88,7 +82,6 @@
 			"actionable": false,
 			"directionType": "undirected",
 			"isBoolean": true,
-			"cloneEachTimeStep": true,
 			"category": "trait",
 			"types": [
 				"anyone",
@@ -103,7 +96,6 @@
 			"actionable": false,
 			"directionType": "undirected",
 			"isBoolean": true,
-			"cloneEachTimeStep": true,
 			"category": "Gender",
 			"types": [
 				"male",
@@ -115,7 +107,6 @@
 			"actionable": true,
 			"directionType": "undirected",
 			"isBoolean": false,
-			"cloneEachTimeStep": true,
 			"category": "attribute",
 			"types": [
 				"intelligence",
@@ -130,7 +121,6 @@
 			"actionable": false,
 			"directionType": "undirected",
 			"isBoolean": true,
-			"cloneEachTimeStep": true,
 			"category": "mood",
 			"types": [
 				"angry",
@@ -155,7 +145,6 @@
 			"actionable": false,
 			"directionType": "undirected",
 			"isBoolean": true,
-			"cloneEachTimeStep": true,
 			"category": "location",
 			"types": [
 				"in-class",
@@ -169,7 +158,6 @@
 			"actionable": true,
 			"directionType": "directed",
 			"isBoolean": true,
-			"cloneEachTimeStep": true,
 			"duration": 2,
 			"category": "communication",
 			"types": [
@@ -184,7 +172,6 @@
 			"actionable": true,
 			"directionType": "directed",
 			"isBoolean": false,
-			"cloneEachTimeStep": true,
 			"category": "feeling",
 			"types": [
 				"friendship",
@@ -203,7 +190,6 @@
 			"actionable": false,
 			"directionType": "directed",
 			"isBoolean": true,
-			"cloneEachTimeStep": true,
 			"duration": 5,
 			"category": "socialRecordLabel",
 			"types": [
@@ -224,7 +210,6 @@
 			"actionable": false,
 			"directionType": "undirected",
 			"isBoolean": true,
-			"cloneEachTimeStep": true,
 			"duration": 5,
 			"category": "socialRecordLabelUndirected",
 			"types": [
@@ -236,7 +221,8 @@
 				"too-smart",
 				"exposed",
 				"not-exposed",
-				"recentclassnap"
+				"recentclassnap",
+				"goodpresentation"
 			],
 			"defaultValue": false
 		}

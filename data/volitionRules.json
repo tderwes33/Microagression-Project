@@ -3,23 +3,26 @@
 	"type": "volition",
 	"rules": [
 		{
-			"name": "People with a positive attitude generally want to increase friendship with other people",
+			"name": "If someone has a tense relationship with another person, they're more likely to increase awkwardness",
 			"conditions": [
 				{
-					"category": "largerEmotionalGroups",
-					"type": "positive",
+					"category": "feeling",
+					"type": "tension",
 					"first": "someone",
-					"value": true
+					"value": 19,
+					"operator": ">",
+					"second": "other"
 				}
 			],
 			"effects": [
 				{
 					"category": "feeling",
-					"type": "friendship",
-					"first": "someone",
-					"second": "other",
+					"type": "awkwardness",
+					"first": "other",
 					"weight": 5,
-					"intentType": true
+					"intentType": true,
+					"value": true,
+					"second": "someone"
 				}
 			],
 			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
@@ -656,9 +659,18 @@
 					"type": "awkwardness",
 					"first": "other",
 					"second": "someone",
-					"weight": -10,
+					"weight": -5,
 					"intentType": true,
 					"value": true
+				},
+				{
+					"category": "feeling",
+					"type": "awkwardness",
+					"first": "other",
+					"weight": -2,
+					"intentType": true,
+					"value": true,
+					"second": "someone"
 				}
 			],
 			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
@@ -694,7 +706,8 @@
 			],
 			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_26",
-			"type": "volition"
+			"type": "volition",
+			"isActive": false
 		},
 		{
 			"name": "If someone is labeled an \"aggresor\" they want to raise their self-perception to feel better about themselves",
@@ -1036,7 +1049,90 @@
 				}
 			],
 			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
+			"id": "volitionRules_35",
+			"type": "volition"
+		},
+		{
+			"name": "People that aren't friends yet are likely to increase tension with others",
+			"conditions": [
+				{
+					"category": "trait",
+					"type": "anyone",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "tension",
+					"first": "someone",
+					"weight": 5,
+					"intentType": true,
+					"value": true,
+					"second": "other"
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_36",
+			"type": "volition"
+		},
+		{
+			"name": "Devin appreciates people who give good presentations ",
+			"conditions": [
+				{
+					"category": "socialRecordLabelUndirected",
+					"type": "goodpresentation",
+					"first": "someone",
+					"value": true
+				},
+				{
+					"category": "trait",
+					"type": "named devin",
+					"first": "other",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "tension",
+					"first": "someone",
+					"weight": 5,
+					"intentType": false,
+					"value": true,
+					"second": "other"
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
+			"id": "volitionRules_37",
+			"type": "volition"
+		},
+		{
+			"name": "If people have a lot of tension for someone, they have more volition to decrease the tense circumstances",
+			"conditions": [
+				{
+					"category": "feeling",
+					"type": "tension",
+					"first": "someone",
+					"value": 39,
+					"operator": ">",
+					"second": "other"
+				}
+			],
+			"effects": [
+				{
+					"category": "feeling",
+					"type": "tension",
+					"first": "someone",
+					"weight": 5,
+					"intentType": false,
+					"value": true,
+					"second": "other"
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
+			"id": "volitionRules_38",
 			"type": "volition"
 		}
 	]
