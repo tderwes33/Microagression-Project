@@ -1,0 +1,175 @@
+{
+		"aggressionOccurred" : { "Chase" : "More testing for parsing JSON with no moods",
+							  "Julia" : "I'd like to say I expected better of you, but I guess that'd be a lie... and we both know how I feel about liars.",
+							  "Devin" : "You know, on second thought, I'm actually gonna head out. (He checks his phone) One of my friends wants to play some video games with me, he mutters unconvincingly (he leaves abruptly leaving no room to even ask what seemed to bother him)",
+							  "Sandra" : "",
+							  "Theo" : "Is this your way of getting back at me because of what happened in high school?" },
+
+		"interactWith" : { "Chase" : "This should work",
+
+
+						"Julia" : { "neutral" : "Oh, hey. Is there something you wanted?", 
+								  "angry" : "I'm not sure I have time for this right now. Can you make it quick?",
+								  "uncomfortable" : "",
+								  "happy" : "Nice to see you! You caught me at a pretty good time."	},
+
+						"Devin" : { "neutral" : "Whats up? Something on your mind?", 
+								  "angry" : "I've got people to see and videogames to play, so this better be good.",
+								  "uncomfortable" : "Could we talk later? I'm not sure I'm really up for it right now.",
+								  "happy" : "Just the person I wanted to see! I've been meaning to talk to you"	},
+
+						"Sandra" : { "neutral" : "", 
+								  "angry" : "",
+								  "uncomfortable" : "",
+								  "happy" : ""	},
+
+						"Theo" : { "neutral" : "Hey man, what's up?", 
+								  "angry" : "",
+								  "uncomfortable" : "",
+								  "happy" : "Just the person I wanted to see. I got some sick news!"	}
+						},		  
+
+
+		"niceThingSuccess": { "Chase" : { "neutral" : "", 
+								  	  "angry" : "",
+								      "uncomfortable" : "",
+								      "happy" : ""	},
+
+							"Julia" : { "neutral" : "", 
+								  	  "angry" : "Heh, today's been tough, but thanks.",
+								  	  "uncomfortable" : "",
+								  	  "happy" : "I'm glad you noticed!" },
+
+							"Devin" : { "neutral" : "Do you say this kind of stuff to all of your friends?", 
+								 	  "angry" : "Thanks... (his lips twitch upwards like he's unable to contain a smile) keep that up and it might make my day a bit better.",
+								  	  "uncomfortable" : "",
+								 	  "happy" : "Haha you always seem to know exactly what to say."	},
+
+							"Sandra" : { "neutral" : "", 
+								 	   "angry" : "",
+								       "uncomfortable" : "",
+								       "happy" : ""	},
+
+							"Theo" : { "neutral" : "", 
+								  	 "angry" : "",
+								 	 "uncomfortable" : "",
+								 	 "happy" : ""	} 
+							},
+
+		"niceThingFail" : { "Chase" : { "neutral" : "", 
+								    "angry" : "",
+								    "uncomfortable" : "",
+								    "happy" : ""	},
+
+						  "Julia" : { "neutral" : "It's going to take more than a basic compliment if you want my attention.", 
+								    "angry" : "",
+								    "uncomfortable" : "",
+								    "happy" : ""	},
+
+						  "Devin" : { "neutral" : "", 
+								    "angry" : "",
+								    "uncomfortable" : "",
+								    "happy" : ""	},
+
+						  "Sandra" : { "neutral" : "", 
+								     "angry" : "",
+								     "uncomfortable" : "",
+								     "happy" : ""	},
+
+					      "Theo" : { "neutral" : "", 
+								   "angry" : "",
+								   "uncomfortable" : "",
+								   "happy" : ""	}
+					    },
+
+		"pretendYouKnowSuccess": { "Chase" : "",
+								"Julia" : "",
+								"Devin" : "",
+								"Sandra" : "",
+								"Theo" : "" },	
+		
+		"pretendYouKnowFail" : {  "Chase" : "",
+								"Julia" : "",
+								"Devin" : "",
+								"Sandra" : "",
+								"Theo" : "" },
+		
+		"sitNextTo" : {  "Chase" : { "neutral" : "", 
+								  "angry" : "",
+								  "uncomfortable" : "",
+								  "happy" : ""	},
+
+					   "Julia" : { "neutral" : "You know, normally I like to sit alone, but I'll make an exception for you.", 
+								  "angry" : "",
+								  "uncomfortable" : "",
+								  "happy" : ""	},
+
+					   "Devin" : { "neutral" : "I don't mean to sound rude, but please don't distract me.", 
+								  "angry" : "",
+								  "uncomfortable" : "",
+								  "happy" : ""	},
+
+					   "Sandra" : { "neutral" : "", 
+								  "angry" : "",
+								  "uncomfortable" : "",
+								  "happy" : ""	},
+
+					   "Theo" : {  "neutral" : "", 
+								 "angry" : "",
+								 "uncomfortable" : "",
+								 "happy" : ""	}
+					 },
+
+		"friendMoves" : { "Chase" : "",
+						 "Julia" : "",
+						 "Devin" : "",
+						 "Sandra" : "",
+						 "Theo" : "Surprise, surprise, I actually made it to class today haha." 
+					  },
+
+		"spendTime" : { "Chase" : "",
+					  "Julia" : "",
+					  "Devin" : "You... wanna hang out with me? Well, what do you have in mind?",
+					  "Sandra" : "",
+					  "Theo" : "" 
+					},
+
+		"watchVideos" : { "Chase" : "",
+						"Julia" : "Are you sure we should be doing this? This isn't exactly my style...",
+						"Devin" : "",
+						"Sandra" : "",
+						"Theo" : "" 
+					  },
+
+
+		"ColorblindnessSuccess" : {  "Chase" : "",
+								  "Devin" : "",
+								  "Sandra" : ""
+								},
+
+		"iceBreakers" : { "Chase" : "",
+						"Julia" : "These kinds of situations usually just make conversations more awkward. (She chuckles lightly despite the brashness of her words)",
+						"Devin" : "",
+						"Sandra" : "",
+						"Theo" : "" 
+					  },
+
+		"badJokes" : { "Chase" : "",
+					 "Julia" : "Was that supposed to be funny?",
+					 "Devin" : "Yeah... never heard that one before. (He looks as if he's barely containing an eyeroll)",
+					 "Sandra" : "",
+					 "Theo" : "" 
+				   },
+
+		"listenIntently" : { "Chase" : "",
+						   "Julia" : "",
+						   "Devin" : "Ah sorry... I didn't mean to rant like this, but I guess I got carried away.",
+						   "Sandra" : "",
+						   "Theo" : "" },
+
+		"findSeat" : { "Julia" : "Testing Purposes"
+
+					 }
+
+
+	}

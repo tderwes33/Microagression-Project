@@ -1,0 +1,138 @@
+{
+	"aggressionOccurred" : {  "Chase" : "",
+							  "Devin" : "",
+							  "Julia" : "",
+							  "Theo" : "",
+							  "Sandra" : "" },
+
+	"interactWith" : { "Chase" : "Talking to People is cool",
+					   "Devin" : "",
+					   "Julia" : "",
+					   "Theo" : "",
+					   "Sandra" : "" },
+
+	"niceThingSuccess": { "Chase" : "",
+
+							"Julia" : "",
+
+							"Devin" : "",
+
+							"Sandra" : "",
+
+							"Theo" : ""  },
+
+		"niceThingFail" : { "Chase" : "" ,
+
+						  "Julia" : { "neutral" : "", 
+								    "angry" : "",
+								    "uncomfortable" : "",
+								    "happy" : ""	},
+
+						  "Devin" : { "neutral" : "", 
+								    "angry" : "",
+								    "uncomfortable" : "",
+								    "happy" : ""	},
+
+						  "Sandra" : { "neutral" : "", 
+								     "angry" : "",
+								     "uncomfortable" : "",
+								     "happy" : ""	},
+
+					      "Theo" : { "neutral" : "", 
+								   "angry" : "",
+								   "uncomfortable" : "",
+								   "happy" : ""	}
+					    },
+
+		"pretendYouKnowSuccess": { "Chase" : "",
+								"Julia" : "",
+								"Devin" : "",
+								"Sandra" : "",
+								"Theo" : "" },	
+		
+		"pretendYouKnowFail" : {  "Chase" : "",
+								"Julia" : "",
+								"Devin" : "",
+								"Sandra" : "",
+								"Theo" : "" },
+		
+		"sitNextTo" : {  "Chase" : "",
+
+					   "Julia" : { "neutral" : "", 
+								  "angry" : "",
+								  "uncomfortable" : "",
+								  "happy" : ""	},
+
+					   "Devin" : { "neutral" : "", 
+								  "angry" : "",
+								  "uncomfortable" : "",
+								  "happy" : ""	},
+
+					   "Sandra" : { "neutral" : "", 
+								  "angry" : "",
+								  "uncomfortable" : "",
+								  "happy" : ""	},
+
+					   "Theo" : {  "neutral" : "", 
+								 "angry" : "",
+								 "uncomfortable" : "",
+								 "happy" : ""	}
+					 },
+
+		"friendMoves" : { "Chase" : "",
+						 "Julia" : "",
+						 "Devin" : "",
+						 "Sandra" : "",
+						 "Theo" : "" 
+					  },
+
+		"spendTime" : { "Chase" : "",
+					  "Julia" : "",
+					  "Devin" : "",
+					  "Sandra" : "",
+					  "Theo" : "" 
+					},
+
+		"watchVideos" : { "Chase" : "",
+						"Julia" : "",
+						"Devin" : "",
+						"Sandra" : "",
+						"Theo" : "" 
+					  },
+
+
+		"ColorblindnessSuccess" : {  "Chase" : "",
+								  "Devin" : "",
+								  "Sandra" : ""
+								},
+
+		"iceBreakers" : { "Chase" : "",
+						"Julia" : "",
+						"Devin" : "",
+						"Sandra" : "",
+						"Theo" : "" 
+					  },
+
+		"badJokes" : { "Chase" : "",
+					 "Julia" : "",
+					 "Devin" : "",
+					 "Sandra" : "",
+					 "Theo" : "" 
+				   },
+
+		"listenIntently" : { "Chase" : "",
+						   "Julia" : "",
+						   "Devin" : "",
+						   "Sandra" : "",
+						   "Theo" : "" },
+
+		"findSeat" : { "Julia" : ""
+
+					 }				   
+
+
+
+
+
+
+}

@@ -1134,6 +1134,133 @@
 			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
 			"id": "volitionRules_38",
 			"type": "volition"
+		},
+		{
+			"name": "Theo's sheltered personality affects his relationship with others",
+			"conditions": [
+				{
+					"category": "personality",
+					"type": "coddled",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "attribute",
+					"type": "persuasiveness",
+					"first": "someone",
+					"weight": 5,
+					"intentType": true,
+					"value": true
+				},
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "someone",
+					"weight": 2,
+					"intentType": true,
+					"value": true,
+					"second": "other"
+				},
+				{
+					"category": "feeling",
+					"type": "self-awareness",
+					"first": "someone",
+					"weight": 3,
+					"intentType": true,
+					"value": true,
+					"second": "other"
+				},
+				{
+					"category": "feeling",
+					"type": "stress",
+					"first": "someone",
+					"weight": 3,
+					"intentType": true,
+					"value": true,
+					"second": "other"
+				},
+				{
+					"category": "feeling",
+					"type": "tension",
+					"first": "someone",
+					"weight": 5,
+					"intentType": true,
+					"value": true,
+					"second": "other"
+				},
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "other",
+					"weight": -2,
+					"intentType": true,
+					"value": true,
+					"second": "someone"
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
+			"id": "volitionRules_39",
+			"type": "volition",
+			"isActive": false
+		},
+		{
+			"name": "Sandra's rattled personality affects her relationship with others",
+			"conditions": [
+				{
+					"category": "personality",
+					"type": "scattered",
+					"first": "someone",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "attribute",
+					"type": "intelligence",
+					"first": "someone",
+					"weight": 5,
+					"intentType": true
+				},
+				{
+					"category": "feeling",
+					"type": "friendship",
+					"first": "someone",
+					"weight": 5,
+					"intentType": true,
+					"value": true,
+					"second": "other"
+				},
+				{
+					"category": "feeling",
+					"type": "awkwardness",
+					"first": "someone",
+					"weight": 5,
+					"intentType": true,
+					"value": true,
+					"second": "other"
+				},
+				{
+					"category": "feeling",
+					"type": "stress",
+					"first": "someone",
+					"weight": 3,
+					"intentType": true,
+					"value": true,
+					"second": "other"
+				},
+				{
+					"category": "attribute",
+					"type": "intelligence",
+					"first": "someone",
+					"weight": 5,
+					"intentType": true
+				}
+			],
+			"origin": "/Users/taylordinwiddie/Documents/Microaggression-Project/data/volitionRules.json",
+			"id": "volitionRules_40",
+			"type": "volition"
 		}
 	]
 }

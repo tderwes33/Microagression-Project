@@ -41,54 +41,12 @@
 			"actionable": false,
 			"directionType": "undirected",
 			"isBoolean": true,
-			"category": "ethnicity",
-			"types": [
-				"black",
-				"asian",
-				"latino",
-				"caucasian",
-				"ambiguous",
-				"mixed-race"
-			],
-			"defaultValue": false
-		},
-		{
-			"actionable": false,
-			"directionType": "undirected",
-			"isBoolean": true,
-			"category": "personality",
-			"types": [
-				"nerdy-dudebro",
-				"battlehardened",
-				"introvert",
-				"mainchar"
-			],
-			"defaultValue": false
-		},
-		{
-			"actionable": false,
-			"directionType": "undirected",
-			"isBoolean": true,
 			"category": "studyPartnerQuality",
 			"types": [
 				"bad-study",
 				"good-study",
 				"average-study",
 				"busy-study"
-			],
-			"defaultValue": false
-		},
-		{
-			"actionable": false,
-			"directionType": "undirected",
-			"isBoolean": true,
-			"category": "trait",
-			"types": [
-				"anyone",
-				"named mc1",
-				"named chase",
-				"named devin",
-				"named julia"
 			],
 			"defaultValue": false
 		},
@@ -223,6 +181,52 @@
 				"not-exposed",
 				"recentclassnap",
 				"goodpresentation"
+			],
+			"defaultValue": false
+		},
+		{
+			"actionable": false,
+			"directionType": "undirected",
+			"isBoolean": true,
+			"category": "personality",
+			"types": [
+				"nerdy-dudebro",
+				"battlehardened",
+				"introvert",
+				"mainchar",
+				"coddled",
+				"scattered"
+			],
+			"defaultValue": false
+		},
+		{
+			"actionable": false,
+			"directionType": "undirected",
+			"isBoolean": true,
+			"category": "ethnicity",
+			"types": [
+				"black",
+				"asian",
+				"caucasian",
+				"ambiguous",
+				"mixed-race",
+				"latinx"
+			],
+			"defaultValue": false
+		},
+		{
+			"actionable": false,
+			"directionType": "undirected",
+			"isBoolean": true,
+			"category": "trait",
+			"types": [
+				"anyone",
+				"named mc1",
+				"named chase",
+				"named devin",
+				"named julia",
+				"named theo",
+				"named sandra"
 			],
 			"defaultValue": false
 		}
